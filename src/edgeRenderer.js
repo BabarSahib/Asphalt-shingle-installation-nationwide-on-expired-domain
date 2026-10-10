@@ -61,7 +61,7 @@ function renderCityHtml(stateSlug, citySlug) {
   <title>${title}</title>
   <meta name="description" content="${metaDesc}">
   <link rel="canonical" href="${canonicalUrl}">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2.2.0">
 
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${metaDesc}">
@@ -731,6 +731,15 @@ function renderCityHtml(stateSlug, citySlug) {
       </div>
     </div>
   </footer>
+
+  <!-- Floating Mobile Circular Call CTA (Matching furnacerepairpros.com) -->
+  <div class="mobile-sticky-cta" role="complementary" aria-label="Call ${site.name}">
+    <a href="tel:${site.phoneTel}" aria-label="Call ${site.phoneDisplay} 24/7">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+    </a>
+  </div>
 
   <script>
     (function() {
