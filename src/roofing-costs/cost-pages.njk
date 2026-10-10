@@ -5,15 +5,6 @@ pagination:
   alias: costItem
 permalink: "roofing-costs/{{ costItem.slug }}/"
 layout: layouts/cost.njk
-eleventyComputed:
-  title: "{{ costItem.title }}"
-  h1: "{{ costItem.title }}"
-  description: "Comprehensive guide to {{ costItem.material | lower }} shingle roof costs in 2026. Explore pricing per square, Good-Better-Best tiers, and contractor bid factors."
-  breadcrumbs:
-    - name: Roofing Costs
-      url: /roofing-costs/
-    - name: "{{ costItem.material }} Cost"
-      url: "/roofing-costs/{{ costItem.slug }}/"
 ---
 
 <h2>How Much Does a {{ costItem.material }} Shingle Roof Cost in 2026?</h2>

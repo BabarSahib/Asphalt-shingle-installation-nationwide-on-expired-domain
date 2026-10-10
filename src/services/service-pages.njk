@@ -5,15 +5,6 @@ pagination:
   alias: service
 permalink: "services/{{ service.slug }}/"
 layout: layouts/service.njk
-eleventyComputed:
-  title: "{{ service.titleName }}"
-  h1: "{{ service.name }}"
-  description: "Professional {{ service.material | lower }} shingle installation and roof replacement. Vetted, licensed, and insured contractors. Connect in 30 to 90 minutes."
-  breadcrumbs:
-    - name: Shingle Services
-      url: /services/
-    - name: "{{ service.name }}"
-      url: "/services/{{ service.slug }}/"
 ---
 
 <h2>Understanding {{ service.name }} & Replacement</h2>

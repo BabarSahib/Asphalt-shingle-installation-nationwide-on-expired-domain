@@ -5,15 +5,6 @@ pagination:
   alias: resourceItem
 permalink: "resources/{{ resourceItem.slug }}/"
 layout: layouts/resource.njk
-eleventyComputed:
-  title: "{{ resourceItem.title }}"
-  h1: "{{ resourceItem.title }}"
-  description: "{{ resourceItem.excerpt }}"
-  breadcrumbs:
-    - name: Resources
-      url: /resources/
-    - name: "{{ resourceItem.title | truncate(35) }}"
-      url: "/resources/{{ resourceItem.slug }}/"
 ---
 
 <h2>Detailed Technical Breakdown</h2>
