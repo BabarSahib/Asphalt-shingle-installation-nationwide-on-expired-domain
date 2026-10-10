@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://1-stop-roofing.com/sitemap-core.xml</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://1-stop-roofing.com/sitemap-services.xml</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://1-stop-roofing.com/sitemap-states.xml</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://1-stop-roofing.com/sitemap-costs.xml</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://1-stop-roofing.com/sitemap-resources.xml</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://1-stop-roofing.com/sitemap-cities.xml</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </sitemap>
 </sitemapindex>

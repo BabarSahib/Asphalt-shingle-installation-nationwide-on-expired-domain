@@ -13,15 +13,16 @@ if (!fs.existsSync(sitemapsDir)) {
   fs.mkdirSync(sitemapsDir, { recursive: true });
 }
 
+const today = new Date().toISOString().split('T')[0];
 let totalUrls = 0;
-let mainCitiesXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+let mainCitiesXml = `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
 for (const [stateSlug, cityList] of Object.entries(locations)) {
-  let stateXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+  let stateXml = `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
   
   cityList.forEach(city => {
     const loc = `${site.domain}/${stateSlug}/${city.slug}/`;
-    const entry = `  <url>\n    <loc>${loc}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>\n`;
+    const entry = `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>\n`;
     stateXml += entry;
     mainCitiesXml += entry;
     totalUrls++;
@@ -34,4 +35,4 @@ for (const [stateSlug, cityList] of Object.entries(locations)) {
 mainCitiesXml += `</urlset>\n`;
 fs.writeFileSync(path.join(distDir, 'sitemap-cities.xml'), mainCitiesXml, 'utf8');
 
-console.log(`[SUCCESS] Generated 51 individual state sitemaps in dist/sitemaps/ and master dist/sitemap-cities.xml with ${totalUrls} total city URLs!`);
+console.log(`[SUCCESS] Generated 51 individual state sitemaps in dist/sitemaps/ and master dist/sitemap-cities.xml with ${totalUrls} total city URLs (lastmod: ${today})!`);
