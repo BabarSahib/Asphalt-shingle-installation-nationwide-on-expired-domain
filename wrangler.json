@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "asphalt-shingle-installation-nationwide-on-expired-domain",
+  "name": "asphalt-shingle-nationwide",
   "main": "worker/index.js",
   "compatibility_date": "2024-09-23",
   "compatibility_flags": ["nodejs_compat"],
