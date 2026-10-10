@@ -4,7 +4,7 @@
   "description": "American Shingle Co. (1-stop-roofing.com) Static Build",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy && node scripts/generate-30k-sitemaps.js",
+    "build": "npx @11ty/eleventy && node scripts/build-cities.js && node scripts/generate-30k-sitemaps.js",
     "serve": "npx @11ty/eleventy --serve",
     "generate:sitemaps": "node scripts/generate-30k-sitemaps.js",
     "test": "node scripts/build-test.js"
