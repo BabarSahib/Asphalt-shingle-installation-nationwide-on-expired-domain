@@ -9,10 +9,10 @@
 // - 'Licensed and Insured Independent Roofing Contractors'
 // - Phone: (833) 348-0328 hardcoded
 
-const states = require('./_data/states.json');
-const services = require('./_data/services.json');
-const site = require('./_data/site.json');
-const locations = require('./_data/locations.json');
+const states = require('../src/_data/states.json');
+const services = require('../src/_data/services.json');
+const site = require('../src/_data/site.json');
+const locations = require('../src/_data/locations.json');
 
 const stateMap = {};
 states.forEach(s => stateMap[s.slug] = s);
