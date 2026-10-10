@@ -60,9 +60,8 @@ breadcrumbs:
     <div class="services-grid" style="grid-template-columns: 1fr; gap: 1.5rem; margin: 2rem 0;">
       {% for s in services %}
       <div class="service-card">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+        <div style="margin-bottom: 0.75rem;">
           <span class="service-badge">{{ s.material }}</span>
-          <span style="font-size: 0.9rem; font-weight: 800; color: var(--color-accent);">{{ s.costRange }}</span>
         </div>
         <h3 style="margin-bottom: 0.5rem;"><a href="/services/{{ s.slug }}/">{{ s.name }}</a></h3>
         <p style="font-size: 0.95rem; margin-bottom: 1rem;">{{ s.shortDescription }}</p>

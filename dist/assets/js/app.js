@@ -14,6 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
+  // Mobile Hamburger Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileNavDropdown = document.getElementById('mobile-nav-dropdown');
+
+  if (mobileMenuBtn && mobileNavDropdown) {
+    mobileMenuBtn.addEventListener('click', () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenuBtn.classList.toggle('is-active');
+      mobileNavDropdown.classList.toggle('is-open');
     });
-  });
+
+    // Close when clicking any nav link inside drawer
+    mobileNavDropdown.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenuBtn.classList.remove('is-active');
+        mobileNavDropdown.classList.remove('is-open');
+      });
+    });
+  }
 });

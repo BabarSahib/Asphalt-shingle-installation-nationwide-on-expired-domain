@@ -147,30 +147,20 @@ export function renderCityHtml(stateSlug, citySlug) {
   </script>
 </head>
 <body>
-  <!-- Top Utility Trust Bar -->
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <div class="top-badges">
-        <span class="badge-item"><span class="badge-dot"></span> ${site.networkClaim}</span>
-        <span class="badge-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Response Time: ${site.responseTime}</span>
-      </div>
-      <div class="top-badges">
-        <span>${site.hours.phone}</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main Sticky Header -->
+  <!-- Main Sticky Header Matching Reference Site -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="brand-logo" title="${site.name} - Home">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-          <polyline points="9 22 9 12 15 12 15 22"></polyline>
-        </svg>
-        <span>${site.name}</span>
+        <div class="logo-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <span class="brand-name">${site.name}</span>
       </a>
 
+      <!-- Desktop Navigation -->
       <nav class="main-nav" aria-label="Primary Navigation">
         <a href="/services/" class="nav-link">Shingle Services</a>
         <a href="/states/" class="nav-link">States</a>
@@ -180,13 +170,33 @@ export function renderCityHtml(stateSlug, citySlug) {
         <a href="/contact/" class="nav-link">Contact</a>
       </nav>
 
-      <div class="header-actions">
+      <!-- Desktop Call Action -->
+      <div class="header-desktop-actions">
         <a href="tel:${site.phoneTel}" class="header-phone-link">
           <span class="header-phone-label">Call Any Time</span>
           <span class="header-phone-num">${site.phoneDisplay}</span>
         </a>
         <a href="tel:${site.phoneTel}" class="btn btn-primary" title="Call ${site.phoneDisplay}">Call ${site.phoneDisplay}</a>
       </div>
+
+      <!-- Mobile Hamburger Menu Button (Matching furnacerepairpros.com) -->
+      <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Dropdown Drawer -->
+    <div class="mobile-nav-menu" id="mobile-nav-dropdown">
+      <nav class="mobile-nav-list">
+        <a href="/services/" class="mobile-nav-item">Shingle Services</a>
+        <a href="/states/" class="mobile-nav-item">States Directory</a>
+        <a href="/roofing-costs/" class="mobile-nav-item">Roofing Costs</a>
+        <a href="/resources/" class="mobile-nav-item">Resources &amp; Guides</a>
+        <a href="/about/" class="mobile-nav-item">About Us</a>
+        <a href="/contact/" class="mobile-nav-item">Contact</a>
+      </nav>
     </div>
   </header>
 
@@ -304,10 +314,7 @@ export function renderCityHtml(stateSlug, citySlug) {
               <img src="${s.image}" alt="${s.name} in ${cityName}" loading="lazy" width="400" height="250" class="service-card-img">
             </div>
             <div class="service-card-body">
-              <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
-                <h3 style="margin: 0;"><a href="/services/${s.slug}/">${s.name} in ${cityName}</a></h3>
-                <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-accent);">${s.costRange}</span>
-              </div>
+              <h3 style="margin: 0 0 0.5rem 0;"><a href="/services/${s.slug}/">${s.name} in ${cityName}</a></h3>
               <p style="font-size: 0.92rem; margin: 0.5rem 0;">${s.shortDescription}</p>
               <div style="display: flex; gap: 1rem; font-size: 0.82rem; color: var(--color-text-muted); margin-top: auto;">
                 <span><strong>Lifespan:</strong> ${s.lifespan}</span>
@@ -519,6 +526,26 @@ export function renderCityHtml(stateSlug, citySlug) {
       </div>
     </div>
   </footer>
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menuDropdown = document.getElementById('mobile-nav-dropdown');
+    if (menuBtn && menuDropdown) {
+      menuBtn.addEventListener('click', function() {
+        const isExp = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', !isExp);
+        menuBtn.classList.toggle('is-active');
+        menuDropdown.classList.toggle('is-open');
+      });
+      menuDropdown.querySelectorAll('a').forEach(function(l) {
+        l.addEventListener('click', function() {
+          menuBtn.setAttribute('aria-expanded', 'false');
+          menuBtn.classList.remove('is-active');
+          menuDropdown.classList.remove('is-open');
+        });
+      });
+    }
+  </script>
 </body>
 </html>`;
 }
