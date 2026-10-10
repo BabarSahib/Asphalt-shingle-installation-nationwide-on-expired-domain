@@ -1,0 +1,25 @@
+{
+  "name": "American Shingle Co.",
+  "legalName": "American Shingle Co. Referral Network LLC",
+  "domain": "https://1-stop-roofing.com",
+  "phoneDisplay": "(833) 348-0328",
+  "phoneTel": "+18333480328",
+  "phoneSchema": "+1-833-348-0328",
+  "responseTime": "30 to 90 minutes",
+  "networkClaim": "Licensed and Insured Independent Roofing Contractors",
+  "hours": {
+    "phone": "Mon-Fri: 7:00 AM - 9:00 PM EST | Sat-Sun: 8:00 AM - 6:00 PM EST",
+    "online": "24/7/365 Online Intake"
+  },
+  "cta": {
+    "primary": "Request an Estimate",
+    "call": "Call (833) 348-0328",
+    "phoneAction": "Speak with a Roofing Specialist"
+  },
+  "reviewer": {
+    "name": "Marcus Vance",
+    "title": "Certified Roof Consultant (CRC) & Building Envelope Inspector",
+    "bio": "22+ years of residential roof inspection, ASTM testing compliance, and structural analysis experience."
+  },
+  "year": 2026
+}

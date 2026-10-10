@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+  <div style="max-width: 850px; margin: 0 auto;">
+    <h1 style="margin-bottom: 1rem;">{{ h1 if h1 else title }}</h1>
+    {% if lead %}
+    <p class="direct-answer">{{ lead }}</p>
+    {% endif %}
+
+    <div class="page-content" style="font-size: 1.05rem; line-height: 1.7; color: var(--color-text-muted);">
+      {{ content | safe }}
+    </div>
+  </div>
+</div>

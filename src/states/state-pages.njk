@@ -1,0 +1,17 @@
+---
+pagination:
+  data: states
+  size: 1
+  alias: state
+permalink: "states/{{ state.slug }}/"
+layout: layouts/state.njk
+eleventyComputed:
+  title: "Shingle Roof Installation & Replacement in {{ state.name }} | American Shingle Co."
+  h1: "Shingle Installation in {{ state.name }}"
+  description: "Licensed and insured shingle roof installation and replacement across {{ state.name }}. Connect with vetted local roofing specialists in 30 to 90 minutes."
+  breadcrumbs:
+    - name: Service Areas
+      url: /states/
+    - name: "{{ state.name }}"
+      url: "/states/{{ state.slug }}/"
+---

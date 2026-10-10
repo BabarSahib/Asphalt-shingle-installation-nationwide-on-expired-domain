@@ -1,0 +1,91 @@
+---
+layout: layouts/base.njk
+title: Shingle Roof Installation by State | American Shingle Co.
+description: Nationwide shingle roof installation and replacement across all 50 states and Washington, D.C. Connect with verified, licensed, and insured roofing contractors.
+breadcrumbs:
+  - name: Service Areas
+    url: /states/
+---
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+  <div style="max-width: 950px; margin: 0 auto;">
+    
+    <div class="trust-pill" style="margin-bottom: 1rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <span>{{ site.networkClaim }} | 50 States + DC Coverage</span>
+    </div>
+
+    <h1>Shingle Roof Installation by State</h1>
+
+    <!-- Direct Answer Box -->
+    <div class="direct-answer">
+      <strong>Nationwide Service Coverage:</strong> American Shingle Co. connects homeowners with licensed and insured independent roofing specialists across all 50 United States and the District of Columbia. Roofing performance demands, municipal licensing rules, and adopted building codes differ significantly across regional climate zones. Select your state below to explore local weather challenges, permit guidelines, and connect with vetted local contractors in 30 to 90 minutes.
+    </div>
+
+    <!-- 51 State Grid -->
+    <h2>Select Your State to View Local Roofing Guidelines</h2>
+    <div class="state-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); margin: 2rem 0 2rem 0;">
+      {% for st in states %}
+      <a href="/states/{{ st.slug }}/" class="state-link">
+        <span>{{ st.name }}</span>
+        <span class="state-abbr">{{ st.abbr }}</span>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div style="margin-bottom: 2.5rem;"></div>
+
+    <!-- Regional Climate & Code Realities -->
+    <h2>Understanding Regional Roofing Code & Climate Variations</h2>
+    <p>
+      Residential roofing standards in North America are shaped by regional weather extremes and adopted editions of the International Residential Code (IRC):
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin: 1.5rem 0 2.5rem 0;">
+      <div class="callout-box">
+        <h3 style="margin-top: 0; color: var(--color-primary);">Gulf Coast & Atlantic Hurricane Zones</h3>
+        <p>
+          States like Florida, Louisiana, Texas, and the Carolinas enforce high-wind design speeds (130 to 180 mph) and secondary water barrier mandates. Roof decking must be sealed with taped joints or full self-adhering membranes to prevent water intrusion if shingles detach.
+        </p>
+      </div>
+
+      <div class="callout-box">
+        <h3 style="margin-top: 0; color: var(--color-primary);">The Great Plains & Central Hail Corridor</h3>
+        <p>
+          Homeowners in Texas, Oklahoma, Colorado, Kansas, and Nebraska face recurrent severe convective storms. Upgrading to UL 2218 Class 4 impact-resistant shingles is standard practice to prevent hail punctures and secure insurance discounts.
+        </p>
+      </div>
+
+      <div class="callout-box">
+        <h3 style="margin-top: 0; color: var(--color-primary);">Northern Freeze-Thaw & Heavy Snow Belts</h3>
+        <p>
+          In the Northeast, Upper Midwest, and mountain regions, building codes strictly mandate self-adhering ice-and-water barrier underlayment along all roof eaves extending at least 24 inches inside the interior heated wall line to prevent catastrophic ice dam leaks.
+        </p>
+      </div>
+
+      <div class="callout-box">
+        <h3 style="margin-top: 0; color: var(--color-primary);">Western Wildland-Urban Interface (WUI) Zones</h3>
+        <p>
+          California and intermountain western communities enforce strict Class A fire-rated exterior roof assemblies to resist airborne windborne wildfire embers. Untreated wood shingles are strictly prohibited in designated high-fire-severity zones.
+        </p>
+      </div>
+    </div>
+
+    <!-- Final Call to Action -->
+    <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
+      <h2 style="color: #ffffff; margin-top: 0;">Speak With a Local Roofing Specialist Today</h2>
+      <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
+        Regardless of your state or city, our referral network connects you with vetted, licensed, and insured roofing professionals who understand your local building code requirements. Average response time is {{ site.responseTime }}.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.1rem;">
+          Call (833) 348-0328
+        </a>
+        <a href="/contact/" class="btn btn-secondary">
+          Request an Estimate
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

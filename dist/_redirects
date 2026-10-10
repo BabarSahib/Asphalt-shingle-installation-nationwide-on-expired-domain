@@ -1,0 +1,16 @@
+# Cloudflare Pages / Workers Redirects for 1-stop-roofing.com
+
+# Canonical URL Normalization
+/index.html   /   301
+/home         /   301
+
+# Normalize non-trailing slash to trailing slash (directory style)
+/services     /services/     301
+/cities/      /states/       301
+/cities       /states/       301
+/roofing-costs /roofing-costs/ 301
+/resources    /resources/    301
+/about        /about/        301
+/contact      /contact/      301
+/how-it-works /how-it-works/ 301
+/sitemap      /sitemap/      301

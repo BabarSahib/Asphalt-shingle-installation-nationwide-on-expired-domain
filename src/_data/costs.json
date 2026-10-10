@@ -1,0 +1,171 @@
+{
+  "hub": {
+    "title": "Shingle Roof Cost Guide & Price Estimator (2026)",
+    "nationalAverageRange": "$8,200 – $14,500 for a standard 2,000 sq ft roof",
+    "costPerSquareOverview": "$380 to $3,000+ depending on material selection",
+    "laborShare": "45% to 60% of total project investment",
+    "materialShare": "40% to 55% of total project investment"
+  },
+  "perSquareGuide": {
+    "title": "Shingle Roof Cost Per Square (100 Sq Ft) Explained",
+    "slug": "shingle-roof-cost-per-square",
+    "definition": "In the roofing industry, one 'square' equals 100 square feet of roof surface area. A typical 2,000 square foot home with a 1.25 pitch multiplier requires approximately 25 to 28 roofing squares including waste allowance.",
+    "pitchMultipliers": [
+      { "pitch": "Low Slope (3:12 to 4:12)", "factor": "1.05 – 1.10", "laborImpact": "Standard labor walking rate" },
+      { "pitch": "Moderate Slope (5:12 to 7:12)", "factor": "1.15 – 1.25", "laborImpact": "Standard pitch; walkable without roof jacks" },
+      { "pitch": "Steep Slope (8:12 to 10:12)", "factor": "1.28 – 1.40", "laborImpact": "+15% to +25% labor surcharge (roof jacks required)" },
+      { "pitch": "Very Steep (11:12 to 12:12+)", "factor": "1.45 – 1.65", "laborImpact": "+30% to +50% steep charge (harnesses, staging, slow walk)" }
+    ],
+    "wasteFactors": [
+      { "roofComplexity": "Simple Gable / Hip", "allowance": "10% to 12%" },
+      { "roofComplexity": "Multiple Dormers & Valleys", "allowance": "15% to 18%" },
+      { "roofComplexity": "Complex Multi-Level Victorian", "allowance": "18% to 22%" }
+    ],
+    "materialTiers": [
+      { "material": "Standard 3-Tab Asphalt", "costPerSquare": "$340 – $440", "installed2000sqft": "$6,800 – $8,800" },
+      { "material": "Architectural Asphalt Shingles", "costPerSquare": "$420 – $580", "installed2000sqft": "$8,400 – $11,600" },
+      { "material": "Class 4 Impact Asphalt", "costPerSquare": "$490 – $660", "installed2000sqft": "$9,800 – $13,200" },
+      { "material": "Wood / Cedar Shingles", "costPerSquare": "$750 – $1,250", "installed2000sqft": "$15,000 – $25,000" },
+      { "material": "Recycled Rubber Shingles", "costPerSquare": "$800 – $1,350", "installed2000sqft": "$16,000 – $27,000" },
+      { "material": "Stone-Coated Metal Shingles", "costPerSquare": "$850 – $1,400", "installed2000sqft": "$17,000 – $28,000" },
+      { "material": "Composite Synthetic Slate/Shake", "costPerSquare": "$950 – $1,600", "installed2000sqft": "$19,000 – $32,000" },
+      { "material": "Natural Quarried Slate", "costPerSquare": "$1,500 – $3,000+", "installed2000sqft": "$30,000 – $60,000+" },
+      { "material": "Solar Shingles (BIPV)", "costPerSquare": "$2,100 – $3,800", "installed2000sqft": "$42,000 – $76,000 (pre-tax credit)" }
+    ]
+  },
+  "materials": [
+    {
+      "slug": "asphalt-shingle-roof-cost",
+      "serviceSlug": "asphalt-shingle-installation",
+      "material": "Asphalt",
+      "title": "Asphalt Shingle Roof Cost Guide (2026)",
+      "costPerSquare": "$380 – $580 per square installed",
+      "averageTotal": "$7,600 – $12,800 (1,800–2,200 sq ft)",
+      "goodBetterBest": {
+        "good": { "name": "Standard 3-Tab", "cost": "$340 – $420/sq", "desc": "Budget-friendly single-layer 25-yr shingles for rental properties and dry climates." },
+        "better": { "name": "Architectural (Dimensional)", "cost": "$420 – $540/sq", "desc": "Dual-layered laminated 30-yr shingles; North America's top residential choice." },
+        "best": { "name": "Designer / Class 4 Impact", "cost": "$520 – $680/sq", "desc": "Thick premium designer cuts with SBS polymer modification for maximum hail defense." }
+      },
+      "costDrivers": [
+        "Roof surface area and slope pitch",
+        "Number of existing shingle layers to tear off ($1.00 - $1.75/sq ft per layer)",
+        "Plywood decking repair or replacement ($65 - $110 per 4x8 sheet)",
+        "Flashing upgrades around chimneys, skylights, and valleys"
+      ]
+    },
+    {
+      "slug": "wood-cedar-shingle-roof-cost",
+      "serviceSlug": "wood-cedar-shingle-installation",
+      "material": "Wood / Cedar",
+      "title": "Wood & Cedar Shingle Roof Cost Guide (2026)",
+      "costPerSquare": "$750 – $1,250 per square installed",
+      "averageTotal": "$15,000 – $26,000",
+      "goodBetterBest": {
+        "good": { "name": "#2 Grade Cedar Shingles", "cost": "$750 – $900/sq", "desc": "Mixed grain cedar for secondary structures or budget siding." },
+        "better": { "name": "#1 Blue Label Red Cedar", "cost": "$900 – $1,150/sq", "desc": "100% edge grain, knot-free Western Red Cedar shingles for prime homes." },
+        "best": { "name": "Class A Fire-Treated Hand-Split Shakes", "cost": "$1,150 – $1,350/sq", "desc": "Pressure-impregnated fire-retardant premium shakes with deep shadow lines." }
+      },
+      "costDrivers": [
+        "Grade of cedar (Grade 1 Blue Label vs Grade 2)",
+        "Hand-split shakes vs sawn uniform shingles",
+        "Factory fire-retardant or fungicide pressure treatment",
+        "Installation of breathable batten matrix underlayment"
+      ]
+    },
+    {
+      "slug": "metal-shingle-roof-cost",
+      "serviceSlug": "metal-shingle-installation",
+      "material": "Metal",
+      "title": "Metal Shingle Roof Cost Guide (2026)",
+      "costPerSquare": "$850 – $1,400 per square installed",
+      "averageTotal": "$17,000 – $29,000",
+      "goodBetterBest": {
+        "good": { "name": "Direct-to-Deck Stamped Steel", "cost": "$850 – $1,050/sq", "desc": "Standard painted interlocking 26-gauge steel shingles." },
+        "better": { "name": "Stone-Coated Galvalume Steel", "cost": "$1,050 – $1,280/sq", "desc": "Ceramic granule embedded steel resisting 140 mph winds and Class 4 hail." },
+        "best": { "name": "Interlocking Stamped Aluminum / Copper-Clad", "cost": "$1,280 – $1,550/sq", "desc": "Zero-rust aluminum alloy engineered for lifetime coastal saltwater resilience." }
+      },
+      "costDrivers": [
+        "Metal gauge and alloy (Galvalume steel vs aluminum)",
+        "Stone-coated granule finish vs PVDF Kynar 500 paint",
+        "Complex flashing accessories at hips, valleys, and rakes",
+        "Overlay vs complete tear-off of underlying shingles"
+      ]
+    },
+    {
+      "slug": "rubber-shingle-roof-cost",
+      "serviceSlug": "rubber-shingle-installation",
+      "material": "Rubber",
+      "title": "Rubber Shingle Roof Cost Guide (2026)",
+      "costPerSquare": "$800 – $1,350 per square installed",
+      "averageTotal": "$16,000 – $27,500",
+      "goodBetterBest": {
+        "good": { "name": "Standard Recycled Rubber Slate Profile", "cost": "$800 – $980/sq", "desc": "Clean slate texture molded from upcycled tire polymers." },
+        "better": { "name": "Architectural Rubber Shake Profile", "cost": "$980 – $1,200/sq", "desc": "Hand-split wood grain aesthetic with Class 4 hail rating." },
+        "best": { "name": "Heavy-Duty Heritage Rubber Tile", "cost": "$1,200 – $1,400/sq", "desc": "Extra-thick elastomeric formulation rated for 2-inch hail deflection and 50-year warranty." }
+      },
+      "costDrivers": [
+        "Tile thickness and formulation (recycled crumb vs virgin elastomeric blends)",
+        "Certified installer network availability in the region",
+        "Ice and water barrier underlayment requirements",
+        "Insurance premium discounts offsetting lifetime cost"
+      ]
+    },
+    {
+      "slug": "composite-shingle-roof-cost",
+      "serviceSlug": "composite-shingle-installation",
+      "material": "Composite",
+      "title": "Composite Shingle Roof Cost Guide (2026)",
+      "costPerSquare": "$950 – $1,600 per square installed",
+      "averageTotal": "$19,000 – $33,000",
+      "goodBetterBest": {
+        "good": { "name": "Single-Width Composite Slate", "cost": "$950 – $1,180/sq", "desc": "Uniform width synthetic tiles with authentic stone beveling." },
+        "better": { "name": "Multi-Width Composite Slate / Shake", "cost": "$1,180 – $1,420/sq", "desc": "Varied widths and blended color shades for high natural realism." },
+        "best": { "name": "Select Hand-Split Composite Shake", "cost": "$1,420 – $1,700/sq", "desc": "Heavy-butt synthetic shakes with Class A fire rating and lifetime warranty." }
+      },
+      "costDrivers": [
+        "Single-width vs multi-width randomized bundles",
+        "Class A vs Class C fire-retardant underlayment system",
+        "Hip and ridge cap tile packages",
+        "Savings from avoiding structural rafter reinforcement (unlike real slate)"
+      ]
+    },
+    {
+      "slug": "slate-shingle-roof-cost",
+      "serviceSlug": "slate-shingle-installation",
+      "material": "Slate",
+      "title": "Slate Shingle Roof Cost Guide (2026)",
+      "costPerSquare": "$1,500 – $3,000+ per square installed",
+      "averageTotal": "$32,000 – $65,000+",
+      "goodBetterBest": {
+        "good": { "name": "Standard S2 Commercial Slate", "cost": "$1,500 – $1,900/sq", "desc": "Imported or secondary quarry slate with 40-75 year expected life." },
+        "better": { "name": "Vermont S1 Grade Clear Slate", "cost": "$1,900 – $2,600/sq", "desc": "Premium domestic quarry stone certified to exceed 100 years of life." },
+        "best": { "name": "Graduated Structural Heavy Slate", "cost": "$2,600 – $3,400+/sq", "desc": "Random-width, heavy-thickness historic custom installations with copper pans." }
+      },
+      "costDrivers": [
+        "Quarry origin and ASTM C406 grade (S1 vs S2)",
+        "Structural engineering inspection and rafter reinforcement",
+        "Solid copper nails and custom 16-20 oz soldered copper flashing",
+        "Master slater specialized artisan labor rates"
+      ]
+    },
+    {
+      "slug": "solar-shingle-roof-cost",
+      "serviceSlug": "solar-shingle-installation",
+      "material": "Solar",
+      "title": "Solar Shingle Roof Cost Guide (2026)",
+      "costPerSquare": "$2,100 – $3,800 per square (Gross before 30% tax credit)",
+      "averageTotal": "$40,000 – $75,000 (Gross) | $28,000 – $52,500 (Net after federal tax credit)",
+      "goodBetterBest": {
+        "good": { "name": "Partial Array Hybrid (Solar + Asphalt)", "cost": "$1,800 – $2,500/sq", "desc": "Active BIPV tiles on sunny roof facets matched with asphalt elsewhere." },
+        "better": { "name": "Full Array BIPV System", "cost": "$2,500 – $3,300/sq", "desc": "Complete integrated glass solar roof tiles across all primary faces." },
+        "best": { "name": "Solar Shingles + Home Battery Storage", "cost": "$3,300 – $4,200/sq", "desc": "Full solar shingle roof paired with whole-home backup battery system." }
+      },
+      "costDrivers": [
+        "System electrical wattage capacity (kW DC array size)",
+        "Inverter, microinverter, and rapid shutdown electrical hardware",
+        "Utility electrical service panel upgrade (100A to 200A/400A)",
+        "30% Federal Clean Energy Tax Credit (IRC Section 25D) reduction"
+      ]
+    }
+  ]
+}

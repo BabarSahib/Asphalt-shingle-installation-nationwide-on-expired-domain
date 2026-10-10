@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /thank-you/
+Disallow: /404.html
+
+Sitemap: https://1-stop-roofing.com/sitemap.xml

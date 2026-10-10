@@ -1,0 +1,62 @@
+---
+layout: layouts/base.njk
+title: Contact American Shingle Co. | Toll-Free Phone & Project Intake
+description: Contact American Shingle Co. Call (833) 348-0328 or submit an online request for shingle roof installation. Typical response time is 30 to 90 minutes.
+h1: Contact American Shingle Co.
+lead: Need help with your residential shingle roof installation or replacement? Speak directly with our roofing coordination team or submit an online inquiry below.
+breadcrumbs:
+  - name: Contact Us
+    url: /contact/
+---
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+  <h1 style="margin-bottom: 1.5rem;">{{ h1 }}</h1>
+  <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: start;">
+    
+    <div style="max-width: 600px;">
+      <h2>Speak with a Roofing Specialist</h2>
+      <p style="font-size: 1.1rem; line-height: 1.6;">
+        For the fastest assistance, call our dedicated nationwide phone line. Our representatives connect you with vetted, licensed, and insured local roofing contractors serving your immediate ZIP code:
+      </p>
+
+      <div class="callout-box callout-box-accent" style="margin: 2rem 0; text-align: center;">
+        <div style="font-size: 0.9rem; text-transform: uppercase; font-weight: 800; color: #9a3412; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Toll-Free Phone Line</div>
+        <div style="font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem;">
+          <a href="tel:{{ site.phoneTel }}" style="color: var(--color-primary); text-decoration: none;">{{ site.phoneDisplay }}</a>
+        </div>
+        <p style="margin-bottom: 1rem; color: #78350f;">
+          Average Contractor Response: <strong>{{ site.responseTime }}</strong>
+        </p>
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.05rem; padding: 0.85rem 1.75rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>Call (833) 348-0328 Now</span>
+        </a>
+      </div>
+
+      <h3>Operating Hours & Support</h3>
+      <p><strong>Phone Intake Hours:</strong><br>{{ site.hours.phone }}</p>
+      <p><strong>Online Project Submission:</strong><br>{{ site.hours.online }}</p>
+
+      <h3>Corporate Correspondence</h3>
+      <p>
+        American Shingle Co. Referral Network<br>
+        Customer Inquiries & Compliance Division<br>
+        100 Enterprise Way, Suite 400<br>
+        Dover, DE 19901<br>
+        Email: compliance@1-stop-roofing.com
+      </p>
+    </div>
+
+    <div>
+      <div class="hero-img-wrapper">
+        <img src="/assets/images/hero_roofing.jpg" alt="American Shingle Co. Roofing Support Team" class="hero-main-img" width="900" height="650">
+      </div>
+      <div class="callout-box" style="margin-top: 1.5rem;">
+        <h4 style="margin-top: 0;">Verified Contractor Network</h4>
+        <p style="margin-bottom: 0.5rem; font-size: 0.95rem;">All independent roofing specialists in our network are licensed and insured across all 50 states.</p>
+        <p style="margin-bottom: 0; font-size: 0.9rem; color: var(--color-text-muted);">Typical Response Time: <strong>{{ site.responseTime }}</strong></p>
+      </div>
+    </div>
+
+  </div>
+</div>

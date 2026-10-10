@@ -1,0 +1,124 @@
+---
+layout: layouts/base.njk
+title: Roofing Shingle Services & Material Types | American Shingle Co.
+description: Compare 7 residential roofing shingle materials. Explore lifespans, installed costs per square, fire and impact ratings, and connect with licensed contractors.
+breadcrumbs:
+  - name: Shingle Services
+    url: /services/
+---
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+  <div style="max-width: 950px; margin: 0 auto;">
+    
+    <div class="trust-pill" style="margin-bottom: 1rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <span>{{ site.networkClaim }} | Response Time: {{ site.responseTime }}</span>
+    </div>
+
+    <h1>Roofing Shingle Services & Material Types</h1>
+
+    <!-- Direct Answer Box -->
+    <div class="direct-answer">
+      <strong>Overview of Shingle Roofing Materials:</strong> Residential shingle roofs fall into seven distinct material classifications, ranging from cost-effective architectural asphalt shingles ($380–$580/square) to generational natural quarried slate ($1,500–$3,000+/square). Selecting the right shingle system depends on your home's architectural style, local building code mandates, roof slope pitch, and prevailing climate hazards such as hail, hurricane-force wind, or wildfire exposure.
+    </div>
+
+    <!-- Master Comparison Table -->
+    <h2>Comprehensive Shingle Material Comparison</h2>
+    <p>Compare the key engineering benchmarks, lifespans, and cost ranges across all seven steep-slope shingle systems:</p>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Material Type</th>
+            <th>Expected Lifespan</th>
+            <th>Installed Cost / Sq</th>
+            <th>Impact Rating</th>
+            <th>Fire Rating</th>
+            <th>Structural Weight</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for s in services %}
+          <tr>
+            <td><strong><a href="/services/{{ s.slug }}/">{{ s.material }}</a></strong></td>
+            <td>{{ s.lifespan }}</td>
+            <td>{{ s.costRange }}</td>
+            <td>{{ s.impactRating }}</td>
+            <td>{{ s.fireRating }}</td>
+            <td>{{ s.weightPerSquare }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 7 Material Cards -->
+    <h2>Explore Detailed Material Installation Specifications</h2>
+    <p>Click on any material to view full technical specifications, ASTM and UL certifications, pros and cons, and regional climate recommendations:</p>
+
+    <div class="services-grid" style="grid-template-columns: 1fr; gap: 1.5rem; margin: 2rem 0;">
+      {% for s in services %}
+      <div class="service-card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <span class="service-badge">{{ s.material }}</span>
+          <span style="font-size: 0.9rem; font-weight: 800; color: var(--color-accent);">{{ s.costRange }}</span>
+        </div>
+        <h3 style="margin-bottom: 0.5rem;"><a href="/services/{{ s.slug }}/">{{ s.name }}</a></h3>
+        <p style="font-size: 0.95rem; margin-bottom: 1rem;">{{ s.shortDescription }}</p>
+
+        <div style="display: flex; gap: 1rem; font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1.25rem;">
+          <span><strong>Lifespan:</strong> {{ s.lifespan }}</span>
+          <span><strong>Impact:</strong> {{ s.impactRating }}</span>
+          <span><strong>Fire:</strong> {{ s.fireRating }}</span>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="/services/{{ s.slug }}/" class="btn btn-primary" style="flex: 1;">
+            {{ s.material }} Installation Guide &rarr;
+          </a>
+          <a href="/roofing-costs/{{ s.costSlug }}/" class="btn btn-secondary">
+            Cost Breakdown
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Decision Helper Section -->
+    <h2>Shingle Selection Decision Helper</h2>
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin: 1.5rem 0 2.5rem 0;">
+      <div class="callout-box">
+        <h3 style="margin-top: 0; color: var(--color-primary);">Best Value & Lowest Initial Investment: Asphalt Shingles</h3>
+        <p>If budget is the primary driver, architectural asphalt shingles provide reliable 20 to 30-year protection, Class A fire safety, and wide color availability with the lowest upfront installation investment.</p>
+      </div>
+
+      <div class="callout-box">
+        <h3 style="margin-top: 0; color: var(--color-primary);">Best for Severe Hail & High Winds: Stone-Coated Metal or Recycled Rubber</h3>
+        <p>In high-hail storm belts (Texas, Colorado, Oklahoma, Midwest), stone-coated steel and elastomeric recycled rubber shingles carry UL 2218 Class 4 impact ratings that deflect large hailstones and resist 140+ mph winds.</p>
+      </div>
+
+      <div class="callout-box">
+        <h3 style="margin-top: 0; color: var(--color-primary);">Best for Luxury Aesthetics Without Weight: Composite Synthetic Shingles</h3>
+        <p>If you desire the authentic appearance of hand-split cedar shakes or quarried slate without heavy framing reinforcement or wildfire hazards, engineered composite polymer tiles deliver a 50-year maintenance-free solution.</p>
+      </div>
+    </div>
+
+    <!-- Final Call to Action -->
+    <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
+      <h2 style="color: #ffffff; margin-top: 0;">Need Help Choosing the Right Shingle System?</h2>
+      <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
+        Speak directly with a roofing specialist to assess your roof's pitch, structural capacity, and local climate demands. Connect with licensed and insured contractors in {{ site.responseTime }}.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.1rem;">
+          Call (833) 348-0328
+        </a>
+        <a href="/contact/" class="btn btn-secondary">
+          Request an Estimate
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,8 @@
+---
+pagination:
+  data: serviceInCityList
+  size: 1
+  alias: item
+permalink: "{{ item.city.stateSlug }}/{{ item.city.slug }}/{{ item.service.slug }}/"
+layout: layouts/service-in-city.njk
+---

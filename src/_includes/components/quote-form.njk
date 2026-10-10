@@ -1,0 +1,57 @@
+<div class="quote-card" id="quote-form">
+  <div class="quote-card-header">
+    <div class="quote-card-title">Request an Estimate</div>
+    <div class="quote-card-subtitle">Connect with licensed & insured roofing contractors. Typical response in {{ site.responseTime }}.</div>
+  </div>
+
+  <form action="/api/lead" method="POST" class="quote-form">
+    <input type="hidden" name="source_url" value="{{ page.url }}">
+    
+    <div class="form-group">
+      <label for="zip" class="form-label">ZIP Code of Property *</label>
+      <input type="text" id="zip" name="zip" class="form-input" placeholder="e.g. 77002" required pattern="[0-9]{5}" maxlength="5" inputmode="numeric">
+    </div>
+
+    <div class="form-group">
+      <label for="project_type" class="form-label">Project Type *</label>
+      <select id="project_type" name="project_type" class="form-select" required>
+        <option value="Replacement">Full Roof Replacement</option>
+        <option value="New Installation">New Shingle Installation</option>
+        <option value="Storm Damage">Storm / Hail Damage Inspection</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="material_preference" class="form-label">Preferred Shingle Material</label>
+      <select id="material_preference" name="material_preference" class="form-select">
+        <option value="Asphalt">Asphalt Shingles (Architectural / 3-Tab)</option>
+        <option value="Metal">Stone-Coated Metal Shingles</option>
+        <option value="Composite">Composite Synthetic Slate / Shake</option>
+        <option value="Rubber">Recycled Rubber Shingles</option>
+        <option value="Wood Cedar">Wood & Cedar Shakes / Shingles</option>
+        <option value="Slate">Natural Quarried Slate</option>
+        <option value="Solar">Solar Shingles (BIPV)</option>
+        <option value="Undecided">Undecided / Need Contractor Advice</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="phone" class="form-label">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" class="form-input" placeholder="(555) 000-0000" required>
+    </div>
+
+    <div class="form-group">
+      <label for="name" class="form-label">Full Name *</label>
+      <input type="text" id="name" name="name" class="form-input" placeholder="Your Full Name" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="width: 100%;">
+      <span>Request Written Estimate</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+
+    <p class="form-disclaimer">
+      By submitting, you agree to our <a href="/terms-of-service/">Terms</a> and <a href="/privacy-policy/">Privacy Policy</a> and authorize American Shingle Co. and partner contractors to contact you via call or text regarding your roofing project. Consent is not a condition of purchase.
+    </p>
+  </form>
+</div>

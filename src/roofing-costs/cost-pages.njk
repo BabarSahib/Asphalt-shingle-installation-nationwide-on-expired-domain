@@ -1,0 +1,35 @@
+---
+pagination:
+  data: costs.materials
+  size: 1
+  alias: costItem
+permalink: "roofing-costs/{{ costItem.slug }}/"
+layout: layouts/cost.njk
+eleventyComputed:
+  title: "{{ costItem.title }}"
+  h1: "{{ costItem.title }}"
+  description: "Comprehensive guide to {{ costItem.material | lower }} shingle roof costs in 2026. Explore pricing per square, Good-Better-Best tiers, and contractor bid factors."
+  breadcrumbs:
+    - name: Roofing Costs
+      url: /roofing-costs/
+    - name: "{{ costItem.material }} Cost"
+      url: "/roofing-costs/{{ costItem.slug }}/"
+---
+
+<h2>How Much Does a {{ costItem.material }} Shingle Roof Cost in 2026?</h2>
+<p>
+  Investing in a <strong>{{ costItem.material | lower }} shingle roof</strong> represents a significant long-term enhancement to your home's structural protection and exterior curb appeal. Nationwide, professional installation typically averages <strong>{{ costItem.costPerSquare }}</strong>, resulting in a total project investment of approximately <strong>{{ costItem.averageTotal }}</strong> for a standard 2,000 square foot residential home.
+</p>
+
+<h2>What Is Included in a Professional Written Proposal?</h2>
+<p>
+  When reviewing written bids from certified independent contractors in our referral network, verify that your proposal accounts for the complete roofing system:
+</p>
+<ul style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.75; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+  <li><strong>Complete Tear-Off & Disposal:</strong> Stripping old shingles down to the sheathing and hauling debris to licensed recycling or disposal facilities.</li>
+  <li><strong>Substrate Decking Inspection:</strong> Checking every square foot of plywood or OSB roof decking for water staining, mold, or structural deflection.</li>
+  <li><strong>Waterproofing Barrier:</strong> Self-adhering ice-and-water shield along eaves, valleys, and around roof penetrations.</li>
+  <li><strong>Synthetic Underlayment:</strong> Commercial-grade tear-resistant breathable synthetic underlayment.</li>
+  <li><strong>Flashing Packages:</strong> Step flashing, counter flashing, kickout diverters, and pre-formed metal drip edges along all eaves and rakes.</li>
+  <li><strong>Continuous Ridge Ventilation:</strong> Balanced intake and exhaust vents to protect manufacturer warranties.</li>
+</ul>

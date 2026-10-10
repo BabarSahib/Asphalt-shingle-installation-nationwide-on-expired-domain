@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+title: Page Not Found (404) | American Shingle Co.
+description: The page you requested could not be found. Browse our roofing shingle services, nationwide state coverage, or call (833) 348-0328.
+permalink: "404.html"
+robots: "noindex, follow"
+h1: Page Not Found (404)
+lead: We could not locate the page you were looking for. The link may have changed or the address may have been entered incorrectly.
+---
+
+<div class="container" style="padding: 2rem 0 4rem 0; text-align: center;">
+  <div style="max-width: 650px; margin: 0 auto;">
+    <h1 style="margin-bottom: 1.5rem;">{{ h1 }}</h1>
+    <p class="direct-answer">{{ lead }}</p>
+      Please explore our main directory hubs or speak directly with a roofing specialist:
+    </p>
+
+    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+      <a href="/" class="btn btn-primary">Return to Home</a>
+      <a href="/services/" class="btn btn-secondary">Shingle Services</a>
+      <a href="/states/" class="btn btn-secondary">Service Areas</a>
+      <a href="/roofing-costs/" class="btn btn-secondary">Roofing Costs</a>
+    </div>
+
+    <div class="callout-box callout-box-accent">
+      <h3 style="margin-top: 0;">Speak with a Roofing Specialist</h3>
+      <p>Have an immediate project question? Call our toll-free phone line:</p>
+      <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="margin-top: 0.5rem;">
+        Call {{ site.phoneDisplay }}
+      </a>
+    </div>
+  </div>
+</div>

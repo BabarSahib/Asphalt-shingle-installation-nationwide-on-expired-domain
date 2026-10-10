@@ -1,0 +1,94 @@
+---
+layout: layouts/base.njk
+title: Shingle Roof Cost Guide (2026 Price Calculator) | American Shingle Co.
+description: Complete guide to residential shingle roof replacement costs in 2026. Compare costs per square across 7 materials, regional state indices, and budgeting formulas.
+breadcrumbs:
+  - name: Roofing Costs
+    url: /roofing-costs/
+---
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+  <div style="max-width: 950px; margin: 0 auto;">
+    
+    <div class="trust-pill" style="margin-bottom: 1rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      <span>2026 Cost Index | Reviewed by {{ site.reviewer.name }}, {{ site.reviewer.title }}</span>
+    </div>
+
+    <h1>Shingle Roof Cost Guide</h1>
+
+    <!-- Direct Answer Box -->
+    <div class="direct-answer">
+      <strong>National Average Roof Cost:</strong> For a typical 2,000 square foot single-family home (25 to 28 roofing squares including pitch and waste allowance), a complete shingle roof replacement generally costs between <strong>$8,200 and $14,500</strong> for standard architectural asphalt shingles. Premium materials such as stone-coated metal, synthetic composite, or natural slate range from <strong>$16,000 to over $45,000</strong>.
+    </div>
+
+    <!-- Master Cost Table -->
+    <h2>Shingle Roofing Costs by Material (2026 Estimates)</h2>
+    <p>Estimated installed pricing based on standard roof pitch (4:12 to 7:12) with single-layer tear-off:</p>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Shingle Material</th>
+            <th>Installed Cost Per Square (100 Sq Ft)</th>
+            <th>Average Project (2,000 Sq Ft Home)</th>
+            <th>Lifespan</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for m in costs.materials %}
+          <tr>
+            <td><strong><a href="/roofing-costs/{{ m.slug }}/">{{ m.material }} Shingles</a></strong></td>
+            <td><strong>{{ m.costPerSquare }}</strong></td>
+            <td>{{ m.averageTotal }}</td>
+            <td><a href="/services/{{ m.serviceSlug }}/">View Specs &rarr;</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Core Cost Pillar Guides -->
+    <h2>Essential Cost Planning Resources</h2>
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin: 1.5rem 0 2.5rem 0;">
+      <div class="callout-box">
+        <h3 style="margin-top: 0;"><a href="/roofing-costs/shingle-roof-cost-per-square/">Shingle Roof Cost Per Square Explained</a></h3>
+        <p>Learn how roofing contractors calculate project bids using "squares" (100 square feet), slope pitch multipliers, and complexity waste factors.</p>
+      </div>
+
+      <div class="callout-box">
+        <h3 style="margin-top: 0;"><a href="/roofing-costs/shingle-roof-cost-by-state/">Shingle Roof Cost by State: 51-State Price Index</a></h3>
+        <p>Compare regional labor rates, permit costs, and local climate code factors across all 50 states and Washington, D.C.</p>
+      </div>
+    </div>
+
+    <!-- Labor vs Material Split -->
+    <h2>Understanding the Labor vs. Material Split</h2>
+    <p>
+      On an average residential steep-slope roofing replacement, your total contractor bid is distributed across three primary cost categories:
+    </p>
+    <ul style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.75; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+      <li><strong>Labor & Craftsmanship (45% – 60%):</strong> Covers skilled tear-off, decking prep, underlayment rolling, shingle nailing, metal flashing bending, staging, and cleanup.</li>
+      <li><strong>Materials & Accessories (35% – 45%):</strong> Encompasses shingles, synthetic underlayment, starter shingles, ridge caps, drip edges, fasteners, and ice-and-water membranes.</li>
+      <li><strong>Permits, Disposal & Overhead (10% – 15%):</strong> Covers municipal building inspection permits, roll-off dumpster rental, landfill tipping fees, and contractor insurance liabilities.</li>
+    </ul>
+
+    <!-- Final Call to Action -->
+    <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
+      <h2 style="color: #ffffff; margin-top: 0;">Request an Itemized Written Estimate</h2>
+      <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
+        Get an accurate project assessment from a licensed and insured local roofing specialist. Average contractor response time is {{ site.responseTime }}.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.1rem;">
+          Call (833) 348-0328
+        </a>
+        <a href="/states/" class="btn btn-secondary">
+          Browse Service Areas
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

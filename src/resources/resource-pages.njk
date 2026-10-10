@@ -1,0 +1,36 @@
+---
+pagination:
+  data: resources
+  size: 1
+  alias: resourceItem
+permalink: "resources/{{ resourceItem.slug }}/"
+layout: layouts/resource.njk
+eleventyComputed:
+  title: "{{ resourceItem.title }}"
+  h1: "{{ resourceItem.title }}"
+  description: "{{ resourceItem.excerpt }}"
+  breadcrumbs:
+    - name: Resources
+      url: /resources/
+    - name: "{{ resourceItem.title | truncate(35) }}"
+      url: "/resources/{{ resourceItem.slug }}/"
+---
+
+<h2>Detailed Technical Breakdown</h2>
+<p>
+  When evaluating residential steep-slope roofing performance, understanding proper installation methods, building code compliance, and material engineering ensures long-term building envelope protection.
+</p>
+<p>
+  Our editorial standards prioritize verifiable data from ASTM International standards, Underwriters Laboratories (UL) fire and impact testing, and the International Residential Code (IRC). Whether addressing storm damage recovery or preventative roof replacement, adherence to these engineering fundamentals prevents premature roof failures.
+</p>
+
+<h2>Best Practices & Homeowner Recommendations</h2>
+<p>
+  Always verify that contractor scopes of work explicitly document compliant materials and installation practices:
+</p>
+<ul style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.75; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+  <li><strong>Verify Independent Contractor Licensing:</strong> Ensure fulfilling contractors possess valid state trade licenses or local municipal registrations, along with active general liability and worker's compensation insurance.</li>
+  <li><strong>Check Ventilation Balance:</strong> Confirm the attic ventilation system maintains a balanced 50/50 ratio between soffit intake and continuous ridge exhaust vents to protect material warranties.</li>
+  <li><strong>Insist on Code-Compliant Accessories:</strong> Demand commercial-grade synthetic underlayment, pre-bent perimeter drip edge, and self-adhered ice-and-water barrier in all valleys and eaves.</li>
+  <li><strong>Document Existing Conditions:</strong> Request pre-tear-off photos of damaged flashing, pipe boots, and deteriorated decking boards before approving additional carpentry change orders.</li>
+</ul>

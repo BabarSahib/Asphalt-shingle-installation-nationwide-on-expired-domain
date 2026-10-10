@@ -1,0 +1,42 @@
+<!-- Top Utility Trust Bar -->
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-badges">
+      <span class="badge-item"><span class="badge-dot"></span> {{ site.networkClaim }}</span>
+      <span class="badge-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Response Time: {{ site.responseTime }}</span>
+    </div>
+    <div class="top-badges">
+      <span>{{ site.hours.phone }}</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main Sticky Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand-logo" title="{{ site.name }} - Home">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      <span>{{ site.name }}</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary Navigation">
+      <a href="/services/" class="nav-link">Shingle Services</a>
+      <a href="/states/" class="nav-link">States</a>
+      <a href="/roofing-costs/" class="nav-link">Roofing Costs</a>
+      <a href="/resources/" class="nav-link">Resources</a>
+      <a href="/about/" class="nav-link">About Us</a>
+      <a href="/contact/" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:{{ site.phoneTel }}" class="header-phone-link">
+        <span class="header-phone-label">Call Any Time</span>
+        <span class="header-phone-num">{{ site.phoneDisplay }}</span>
+      </a>
+      <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" title="Call (833) 348-0328">Call (833) 348-0328</a>
+    </div>
+  </div>
+</header>

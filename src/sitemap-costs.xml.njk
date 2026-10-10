@@ -1,0 +1,24 @@
+---
+permalink: "sitemap-costs.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.domain }}/roofing-costs/shingle-roof-cost-per-square/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.domain }}/roofing-costs/shingle-roof-cost-by-state/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% for m in costs.materials %}
+  <url>
+    <loc>{{ site.domain }}/roofing-costs/{{ m.slug }}/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% endfor %}
+</urlset>

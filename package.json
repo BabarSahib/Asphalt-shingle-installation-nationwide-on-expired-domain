@@ -1,0 +1,19 @@
+{
+  "name": "asphalt-shingle-nationwide-on-expired-domain",
+  "version": "1.0.0",
+  "description": "American Shingle Co. (1-stop-roofing.com) Static Build",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy && node scripts/generate-30k-sitemaps.js",
+    "serve": "npx @11ty/eleventy --serve",
+    "generate:sitemaps": "node scripts/generate-30k-sitemaps.js",
+    "test": "node scripts/build-test.js"
+  },
+  "keywords": [],
+  "author": "American Shingle Co.",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

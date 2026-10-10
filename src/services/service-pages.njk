@@ -1,0 +1,45 @@
+---
+pagination:
+  data: services
+  size: 1
+  alias: service
+permalink: "services/{{ service.slug }}/"
+layout: layouts/service.njk
+eleventyComputed:
+  title: "{{ service.titleName }}"
+  h1: "{{ service.name }}"
+  description: "Professional {{ service.material | lower }} shingle installation and roof replacement. Vetted, licensed, and insured contractors. Connect in 30 to 90 minutes."
+  breadcrumbs:
+    - name: Shingle Services
+      url: /services/
+    - name: "{{ service.name }}"
+      url: "/services/{{ service.slug }}/"
+---
+
+<h2>Understanding {{ service.name }} & Replacement</h2>
+<p>
+  When planning a steep-slope residential roofing project, <strong>{{ service.name | lower }}</strong> encompasses both new construction installation and the complete tear-off and replacement of aging, weathered shingles down to the structural roof decking.
+</p>
+<p>
+  Our nationwide contractor referral network connects property owners with independent, verified roofing professionals who specialize in {{ service.material | lower }} systems. From architectural layout and proper ventilation integration to code-compliant fastening patterns, every project is executed to deliver optimal weatherproofing and aesthetic curb appeal.
+</p>
+
+<h2>The 5-Step Professional Installation Process</h2>
+<p>
+  A certified residential installation follows a rigorous engineering sequence to protect your home's building envelope:
+</p>
+<ol style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.75; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+  <li><strong>Complete Tear-Off & Deck Inspection:</strong> Removal of all existing roofing layers down to bare plywood or OSB sheathing. Damaged, delaminated, or rotted decking boards are replaced with new APA-rated sheathing.</li>
+  <li><strong>Eaves & Valley Water Barrier Installation:</strong> Application of self-adhering ice-and-water membranes along critical leak zones, including eaves, valleys, rakes, and chimney saddles.</li>
+  <li><strong>Synthetic Underlayment & Metal Drip Edge:</strong> High-tear-strength synthetic underlayment is rolled horizontally across the entire deck, complemented by corrosion-resistant metal drip edge installed along all perimeter roof edges.</li>
+  <li><strong>Precision Shingle Application:</strong> Shingles are installed using manufacturer-specified nail schedules (typically 4 to 6 fasteners per shingle) to ensure wind resistance compliance up to {{ service.windRating }}.</li>
+  <li><strong>Ridge Ventilation & Magnetic Cleanup:</strong> Continuous ridge exhaust vents and matching hip/ridge cap shingles are secured, followed by multiple rolling magnetic sweeps across lawns, driveways, and landscaping to collect all loose nails.</li>
+</ol>
+
+<h2>Building Code & Fire Safety Compliance</h2>
+<p>
+  {{ service.name }} must meet strict building standards under the International Residential Code (IRC Chapter 9). With a certified fire rating of <strong>{{ service.fireRating }}</strong> and an impact rating of <strong>{{ service.impactRating }}</strong>, this system provides dependable defense against windborne embers, hail strikes, and severe weather events.
+</p>
+<p>
+  Independent contractors in our network pull required municipal building permits, coordinate mid-deck or final building inspections, and ensure all installations adhere to local climate amendments.
+</p>

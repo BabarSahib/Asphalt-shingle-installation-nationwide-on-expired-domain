@@ -1,0 +1,14 @@
+---
+permalink: "sitemap-resources.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for r in resources %}
+  <url>
+    <loc>{{ site.domain }}/resources/{{ r.slug }}/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  {% endfor %}
+</urlset>

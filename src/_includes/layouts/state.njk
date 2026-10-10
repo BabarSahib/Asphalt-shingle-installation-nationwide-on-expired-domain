@@ -1,0 +1,257 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- State Hero Section -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <!-- Badges Top (Matching furnace repair pros) -->
+      <div class="hero-badges-top">
+        <span class="hero-pill-active"><span class="badge-dot"></span> Priority Roofing Network Active</span>
+        <span class="hero-pill-fast">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          FAST ROOFING SERVICE IN {{ state.name | upper }}
+        </span>
+      </div>
+
+      <h1>Shingle Installation in {{ state.name }}</h1>
+
+      <!-- Rich Niche Paragraph (Matching furnace repair pros depth) -->
+      <p class="hero-lead">
+        American Shingle Co. connects homeowners across {{ state.name }} with licensed and insured roofing specialists equipped to handle complete tear-offs, underlayment upgrades, deck structural inspections, and precision shingle installations. We provide rapid statewide contractor dispatch with typical partner response times of 30 to 90 minutes &mdash; ensuring {{ state.buildingCode }} compliance, Class 4 impact options for regional weather resilience, and long-lasting manufacturer warranties.
+      </p>
+
+      <div class="hero-trust-pills">
+        <span class="trust-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Code: {{ state.buildingCode }}</span>
+        <span class="trust-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg> Hail Risk: {{ state.hailRisk }}</span>
+      </div>
+
+      <!-- Action Buttons (Matching furnace repair pros) -->
+      <div class="hero-cta-group">
+        <a href="tel:{{ site.phoneTel }}" class="hero-btn-call">
+          <div class="hero-btn-call-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+          </div>
+          <div class="hero-btn-call-text">
+            <span class="hero-btn-call-sub">CALL 24/7 INTAKE</span>
+            <span class="hero-btn-call-num">{{ site.phoneDisplay }}</span>
+          </div>
+        </a>
+        <a href="#state-city-filter" class="hero-btn-outline">
+          <span>Explore Cities &rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="hero-img-wrapper" style="position: relative;">
+        <img src="/assets/images/hero_roofing.jpg" alt="Professional roofing contractors in {{ state.name }}" class="hero-main-img" width="900" height="650">
+        <div class="hero-img-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <span>Response Time: 30 to 90 Mins</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Ribbon below Hero (Matching furnace repair pros) -->
+<div class="hero-stats-strip">
+  <div class="container hero-stats-grid">
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">30 to 90 Min</span>
+      <span class="hero-stat-label">Average Partner Response</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">Licensed &amp; Insured</span>
+      <span class="hero-stat-label">Independent Contractors</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">All 7 Materials</span>
+      <span class="hero-stat-label">Asphalt, Metal, Slate &amp; More</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">Code Compliance</span>
+      <span class="hero-stat-label">{{ state.buildingCode }}</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main State Content -->
+<section style="padding: 3.5rem 0;">
+  <div class="container" style="max-width: 900px;">
+    
+    <!-- State Snapshot Card -->
+    <div class="direct-answer">
+      <strong>{{ state.name }} Roofing Snapshot:</strong> Residential roofing in {{ state.name }} must withstand local weather stresses characterized by {{ state.climate | lower }} Contractors in our network comply with {{ state.buildingCode }} and {{ state.licensing }}
+    </div>
+
+    <h2>{{ state.name }} Climate Hazards & Storm Durability</h2>
+    <p>
+      Selecting the correct shingle material and fastening schedule depends heavily on {{ state.name }}'s prevailing weather patterns:
+    </p>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Climate & Storm Factor</th>
+            <th>Regional Profile & Recommended Shingle Defense</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Climate Overview</strong></td>
+            <td>{{ state.climate }}</td>
+          </tr>
+          <tr>
+            <td><strong>Hail Exposure Risk</strong></td>
+            <td><strong>{{ state.hailRisk }}</strong> — In moderate to extreme zones, UL 2218 Class 4 impact shingles are recommended.</td>
+          </tr>
+          <tr>
+            <td><strong>Wind Velocity Risk</strong></td>
+            <td><strong>{{ state.windRisk }}</strong> — Requires ASTM D7158 Class H wind-rated shingles with enhanced 6-nail patterns.</td>
+          </tr>
+          <tr>
+            <td><strong>Freeze-Thaw Cycling</strong></td>
+            <td><strong>{{ state.freezeThaw }}</strong> — Ice barrier self-adhering membranes required along eaves in freeze zones.</td>
+          </tr>
+          <tr>
+            <td><strong>Licensing Authority</strong></td>
+            <td>{{ state.licensing }}</td>
+          </tr>
+          <tr>
+            <td><strong>Adopted Building Code</strong></td>
+            <td>{{ state.buildingCode }}</td>
+          </tr>
+          <tr>
+            <td><strong>Local Permitting Notes</strong></td>
+            <td>{{ state.permitNote }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 7 Materials Suitability in this State -->
+    <h2>Recommended Shingle Materials for {{ state.name }} Homes</h2>
+    <p>
+      Our network of independent contractors installs and replaces all seven major shingle roofing systems across {{ state.name }}:
+    </p>
+
+    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2.5rem 0;">
+      {% for s in services %}
+      <div class="service-card">
+        <div class="service-card-img-wrapper">
+          <img src="{{ s.image }}" alt="{{ s.name }} in {{ state.name }}" loading="lazy" width="400" height="250" class="service-card-img">
+        </div>
+        <div class="service-card-body">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 style="margin: 0;"><a href="/services/{{ s.slug }}/">{{ s.name }}</a></h3>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-accent);">{{ s.costRange }}</span>
+          </div>
+          <p style="font-size: 0.92rem; margin: 0.5rem 0;">{{ s.shortDescription }}</p>
+          <div style="display: flex; gap: 1rem; font-size: 0.82rem; color: var(--color-text-muted); margin-top: auto;">
+            <span><strong>Lifespan:</strong> {{ s.lifespan }}</span>
+            <span><strong>Impact:</strong> {{ s.impactRating }}</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Regional Cost Guidance -->
+    <div class="callout-box callout-box-accent">
+      <h3>{{ state.name }} Roofing Cost Expectations</h3>
+      <p>
+        The regional labor and material cost index for {{ state.name }} is calculated at <strong>{{ state.costIndex }}x</strong> the national baseline average. For a typical 2,000 square foot home, an architectural asphalt shingle roof installation generally ranges from <strong>${{ (8200 * state.costIndex) | round }} to ${{ (13800 * state.costIndex) | round }}</strong> depending on roof pitch and tear-off layers.
+      </p>
+      <a href="/roofing-costs/shingle-roof-cost-by-state/" class="btn btn-primary" style="margin-top: 0.5rem;">
+        View 51-State Roofing Cost Comparison
+      </a>
+    </div>
+
+    <!-- City Directory Section -->
+    <h2>Communities & Cities Served in {{ state.name }}</h2>
+    <p>
+      American Shingle Co. provides licensed and insured roofing contractor connections across {{ state.name }}. Select your city or town below to check local contractor availability, permit guidelines, and get an estimate:
+    </p>
+
+    {% set stateCities = locations[state.slug] %}
+    {% if not stateCities or stateCities.length == 0 %}
+      {% set stateCities = cities | filterByState(state.slug) %}
+    {% endif %}
+
+    {% if stateCities and stateCities.length > 0 %}
+    <div style="margin: 1.5rem 0 1rem 0;">
+      <input type="text" id="state-city-filter" placeholder="Filter {{ state.name }} cities..." style="width: 100%; max-width: 420px; padding: 0.75rem 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); font-size: 0.95rem;" onkeyup="filterStateCities()">
+      <span style="display: block; font-size: 0.82rem; color: var(--color-text-muted); margin-top: 0.4rem;">
+        Showing all {{ stateCities.length }} covered municipalities in {{ state.name }}.
+      </span>
+    </div>
+
+    <div class="state-grid" id="state-cities-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); max-height: 520px; overflow-y: auto; padding: 1.25rem; background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+      {% for c in stateCities %}
+      <a href="/{{ state.slug }}/{{ c.slug }}/" class="state-link city-link-item" data-name="{{ c.name | lower }}" style="padding: 0.55rem 0.85rem; font-size: 0.92rem;">
+        <span>{{ c.name }}</span>
+      </a>
+      {% endfor %}
+    </div>
+
+    <script>
+      function filterStateCities() {
+        var q = document.getElementById('state-city-filter').value.toLowerCase().trim();
+        var links = document.querySelectorAll('#state-cities-grid .city-link-item');
+        links.forEach(function(l) {
+          var name = l.getAttribute('data-name') || '';
+          l.style.display = (q === '' || name.includes(q)) ? 'flex' : 'none';
+        });
+      }
+    </script>
+    {% else %}
+    <p style="background: #ffffff; padding: 1.5rem; border: 1px solid var(--color-border); border-radius: var(--radius-md);">
+      Serving all municipalities, counties, and unincorporated areas across {{ state.name }}. Call <a href="tel:{{ site.phoneTel }}"><strong>{{ site.phoneDisplay }}</strong></a> to be connected with a certified contractor serving your specific ZIP code.
+    </p>
+    {% endif %}
+
+    <!-- State FAQs -->
+    <h2 style="margin-top: 3rem;">{{ state.name }} Roofing Questions</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-summary">Do roofing contractors in {{ state.name }} need to be licensed?</summary>
+        <div class="faq-content">
+          <p>{{ state.licensing }} All independent contractors in the American Shingle Co. network must verify compliance with applicable state and local jurisdiction licensing and insurance requirements.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">Are building permits required for roof replacement in {{ state.name }}?</summary>
+        <div class="faq-content">
+          <p>{{ state.permitNote }} In virtually all incorporated areas, a building permit must be obtained prior to initiating a complete roof tear-off and replacement.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">What is the best shingle material for homes in {{ state.name }}?</summary>
+        <div class="faq-content">
+          <p>For most {{ state.name }} homeowners, architectural asphalt shingles provide the best balance of value, Class A fire protection, and 130 mph wind defense. In areas with {{ state.hailRisk | lower }} hail exposure, Class 4 impact-resistant stone-coated metal or recycled rubber shingles provide maximum longevity.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Final CTA Box -->
+    <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
+      <h2 style="color: #ffffff; margin-top: 0;">Need Shingle Installation in {{ state.name }}?</h2>
+      <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
+        Connect with licensed and insured local roofing professionals. Phone intake available 7 days a week, with average partner response time in {{ site.responseTime }}.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.1rem;">
+          Call (833) 348-0328
+        </a>
+        <a href="#state-city-filter" class="btn btn-secondary">
+          Find Your City
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

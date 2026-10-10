@@ -1,0 +1,192 @@
+---
+layout: layouts/base.njk
+---
+{% if not city or not city.name %}{% set city = item.city %}{% endif %}
+{% if not service or not service.name %}{% set service = item.service %}{% endif %}
+
+<!-- Service-in-City Hero Section -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <!-- Badges Top (Matching furnace repair pros) -->
+      <div class="hero-badges-top">
+        <span class="hero-pill-active"><span class="badge-dot"></span> Priority Roofing Network Active</span>
+        <span class="hero-pill-fast">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          FAST ROOFING SERVICE IN {{ city.name | upper }}, {{ city.stateAbbr }}
+        </span>
+      </div>
+
+      <h1>{{ service.name }} in {{ city.name }}, {{ city.stateAbbr }}</h1>
+
+      <!-- Rich Niche Paragraph (Matching furnace repair pros depth) -->
+      <p class="hero-lead">
+        American Shingle Co. connects homeowners in {{ city.name }}, {{ city.stateAbbr }} with licensed and insured roofing specialists dedicated to precision {{ service.material | lower }} shingle installation. Our partner network provides rapid contractor dispatch with typical response times of 30 to 90 minutes &mdash; delivering {{ service.windRating }} wind resistance, Class {{ service.impactRating }} impact durability, and full municipal permit coordination with the {{ city.permitDept }}.
+      </p>
+
+      <div class="hero-trust-pills">
+        <span class="trust-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Lifespan: {{ service.lifespan }}</span>
+        <span class="trust-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg> Impact: {{ service.impactRating }}</span>
+        <span class="trust-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Permits: {{ city.permitDept }}</span>
+      </div>
+
+      <!-- Action Buttons (Matching furnace repair pros) -->
+      <div class="hero-cta-group">
+        <a href="tel:{{ site.phoneTel }}" class="hero-btn-call">
+          <div class="hero-btn-call-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+          </div>
+          <div class="hero-btn-call-text">
+            <span class="hero-btn-call-sub">CALL 24/7 INTAKE</span>
+            <span class="hero-btn-call-num">{{ site.phoneDisplay }}</span>
+          </div>
+        </a>
+        <a href="/{{ city.stateSlug }}/{{ city.slug }}/" class="hero-btn-outline">
+          <span>All {{ city.name }} Roofing &rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="hero-img-wrapper" style="position: relative;">
+        <img src="{{ service.image }}" alt="{{ service.name }} in {{ city.name }}" class="hero-main-img" width="900" height="650">
+        <div class="hero-img-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <span>Response Time: 30 to 90 Mins</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Ribbon below Hero (Matching furnace repair pros) -->
+<div class="hero-stats-strip">
+  <div class="container hero-stats-grid">
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">30 to 90 Min</span>
+      <span class="hero-stat-label">Average Partner Response</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">{{ service.lifespan }}</span>
+      <span class="hero-stat-label">Expected Material Lifespan</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">{{ service.windRating }}</span>
+      <span class="hero-stat-label">Wind Velocity Rating</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">Code Compliance</span>
+      <span class="hero-stat-label">{{ city.permitDept }}</span>
+    </div>
+  </div>
+</div>
+
+<!-- Content Section -->
+<section style="padding: 3.5rem 0;">
+  <div class="container" style="max-width: 900px;">
+    
+    <!-- Direct Answer Box -->
+    <div class="direct-answer">
+      <strong>{{ service.material }} Roofing in {{ city.name }}:</strong> For {{ city.name }} residential homes, {{ service.material | lower }} shingles provide exceptional performance against local weather challenges with {{ city.hailRisk | lower }} hail risk and {{ city.windRisk | lower }}. Standard installation delivers a service lifespan of {{ service.lifespan }}, with local installed pricing generally averaging {{ service.costRange }}.
+    </div>
+
+    <h2>Why Choose {{ service.material }} Shingles for Your {{ city.name }} Home?</h2>
+    <p>
+      {{ service.shortDescription }} In {{ city.name }}, where homes have a median construction year of {{ city.medianHomeAge }}, upgrading to {{ service.material | lower }} shingles enhances curb appeal while ensuring full compliance with municipal building codes enforced by the <strong>{{ city.permitDept }}</strong>.
+    </p>
+
+    <!-- Specifications Table -->
+    <h2>Technical Specifications & Performance</h2>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Specification Standard</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Expected Lifespan</strong></td>
+            <td>{{ service.lifespan }}</td>
+          </tr>
+          <tr>
+            <td><strong>Wind Resistance</strong></td>
+            <td>{{ service.windRating }}</td>
+          </tr>
+          <tr>
+            <td><strong>Impact / Hail Resistance</strong></td>
+            <td>{{ service.impactRating }}</td>
+          </tr>
+          <tr>
+            <td><strong>Fire Safety Rating</strong></td>
+            <td>{{ service.fireRating }}</td>
+          </tr>
+          <tr>
+            <td><strong>Substrate Roof Decking</strong></td>
+            <td>{{ service.specifications.deckRequirement }}</td>
+          </tr>
+          <tr>
+            <td><strong>Fasteners & Code Schedule</strong></td>
+            <td>{{ service.specifications.fasteners }}</td>
+          </tr>
+          <tr>
+            <td><strong>Local Permitting Authority</strong></td>
+            <td>{{ city.permitDept }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pricing Guidance -->
+    <div class="callout-box callout-box-accent">
+      <h3>Estimated {{ service.material }} Installation Cost in {{ city.name }}</h3>
+      <p>
+        In {{ city.county }}, installed investment for {{ service.material | lower }} shingles typically ranges from <strong>{{ service.costRange }}</strong>. For detailed square footage calculations and pitch multipliers, review our comprehensive cost guide:
+      </p>
+      <a href="/roofing-costs/{{ service.costSlug }}/" class="btn btn-primary" style="margin-top: 0.5rem;">
+        View {{ service.material }} Roof Cost Guide
+      </a>
+    </div>
+
+    <!-- Alternative Materials in this City -->
+    <h2>Alternative Shingle Options in {{ city.name }}</h2>
+    <p>Compare {{ service.material }} with other popular residential roofing systems installed across {{ city.name }}:</p>
+    <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.5rem 0 2.5rem 0;">
+      <div class="callout-box">
+        <h3 style="margin-top: 0;"><a href="/{{ city.stateSlug }}/{{ city.slug }}/asphalt-shingle-installation/">Asphalt Shingle Installation in {{ city.name }}</a></h3>
+        <p>The most widely installed, economical steep-slope roofing choice with 25-30 year architectural profiles.</p>
+      </div>
+      <div class="callout-box">
+        <h3 style="margin-top: 0;"><a href="/{{ city.stateSlug }}/{{ city.slug }}/metal-shingle-installation/">Metal Shingle Installation in {{ city.name }}</a></h3>
+        <p>Permanent 50+ year interlocking stone-coated steel shingles with maximum Class 4 hail resistance.</p>
+      </div>
+      <div class="callout-box">
+        <h3 style="margin-top: 0;"><a href="/{{ city.stateSlug }}/{{ city.slug }}/composite-shingle-installation/">Composite Shingle Installation in {{ city.name }}</a></h3>
+        <p>Lightweight synthetic slate and shake tiles offering luxury aesthetics without structural modifications.</p>
+      </div>
+    </div>
+
+    <!-- Return to City Hub -->
+    <p style="margin: 2rem 0; font-size: 1.05rem;">
+      &larr; Return to <a href="/{{ city.stateSlug }}/{{ city.slug }}/"><strong>All Shingle Roofing Services in {{ city.name }}, {{ city.stateAbbr }}</strong></a> or view national <a href="/services/{{ service.slug }}/"><strong>{{ service.name }} Specifications</strong></a>.
+    </p>
+
+    <!-- Final Call to Action -->
+    <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
+      <h2 style="color: #ffffff; margin-top: 0;">Request an Estimate for {{ service.material }} Shingles in {{ city.name }}</h2>
+      <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
+        Connect with licensed and insured local contractors specializing in {{ service.material | lower }} shingle installation. Typical response time is {{ site.responseTime }}.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.15rem; padding: 0.95rem 2rem;">
+          Call (833) 348-0328
+        </a>
+        <a href="/{{ city.stateSlug }}/{{ city.slug }}/" class="btn btn-secondary">
+          Browse {{ city.name }} Services
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

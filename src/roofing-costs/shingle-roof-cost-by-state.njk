@@ -1,0 +1,78 @@
+---
+layout: layouts/base.njk
+title: "Shingle Roof Cost by State: 51-State Price Comparison (2026) | American Shingle Co."
+description: Compare shingle roof replacement costs across all 50 states and Washington, D.C. Explore regional labor indices, building code factors, and price ranges.
+breadcrumbs:
+  - name: Roofing Costs
+    url: /roofing-costs/
+  - name: Cost by State
+    url: /roofing-costs/shingle-roof-cost-by-state/
+---
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+  <div style="max-width: 950px; margin: 0 auto;">
+    
+    <div class="trust-pill" style="margin-bottom: 1rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <span>51-State Regional Labor Index | Reviewed by {{ site.reviewer.name }}, {{ site.reviewer.title }}</span>
+    </div>
+
+    <h1>Shingle Roof Cost by State</h1>
+
+    <!-- Direct Answer Box -->
+    <div class="direct-answer">
+      <strong>How Geographic Location Affects Roof Replacement Costs:</strong> Across the United States, replacing a residential asphalt shingle roof on an average 2,000 square foot home ranges from approximately <strong>$7,400 to $18,500</strong>. Regional pricing is heavily driven by prevailing skilled trade labor wages, local building permit fees, cold-climate ice dam mandates, and hurricane windborne debris codes.
+    </div>
+
+    <h2>51-State Shingle Roof Replacement Cost Table</h2>
+    <p>
+      Estimated ranges for a standard 2,000 sq ft home (approx. 25 squares of architectural asphalt shingles) including single-layer tear-off, synthetic underlayment, and standard permits:
+    </p>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>State</th>
+            <th>Regional Cost Index</th>
+            <th>Estimated 2,000 Sq Ft Project</th>
+            <th>Primary Regional Cost Drivers</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for st in states %}
+          <tr>
+            <td><strong><a href="/states/{{ st.slug }}/">{{ st.name }}</a></strong></td>
+            <td><strong>{{ st.costIndex }}x</strong></td>
+            <td>${{ (8200 * st.costIndex) | round }} – ${{ (13800 * st.costIndex) | round }}</td>
+            <td style="font-size: 0.88rem;">{{ st.hailRisk }} hail risk; {{ st.windRisk | lower }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Methodology -->
+    <h2>Estimating Methodology & Data Sources</h2>
+    <p>
+      Our regional cost indices are compiled by tracking regional construction wage statistics from the U.S. Bureau of Labor Statistics (BLS), municipal permit fee schedules, and insurance claim loss benchmarks. Actual project bids vary based on home height, slope pitch, accessibility, and material selection.
+    </p>
+
+    <!-- Final Call to Action -->
+    <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
+      <h2 style="color: #ffffff; margin-top: 0;">Request an Accurate Local Roofing Estimate</h2>
+      <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
+        Get an accurate written estimate tailored to your local municipal code requirements. Average contractor response time is {{ site.responseTime }}.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.1rem;">
+          Call (833) 348-0328
+        </a>
+        <a href="/states/" class="btn btn-secondary">
+          Browse Service Areas
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

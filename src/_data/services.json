@@ -1,0 +1,435 @@
+[
+  {
+    "id": "asphalt",
+    "slug": "asphalt-shingle-installation",
+    "name": "Asphalt Shingle Installation",
+    "titleName": "Asphalt Shingle Installation & Roof Replacement",
+    "material": "Asphalt",
+    "shortDescription": "Asphalt shingles are North America's most popular residential roofing system, combining cost-effectiveness, proven Class A fire protection, and rapid installation.",
+    "costRange": "$380 – $580 per square",
+    "costSlug": "asphalt-shingle-roof-cost",
+    "lifespan": "20 to 30 Years",
+    "weightPerSquare": "230 – 320 lbs",
+    "fireRating": "Class A (UL 790 standard)",
+    "impactRating": "Class 3 to Class 4 (UL 2218)",
+    "windRating": "Up to 130 MPH (ASTM D7158 Class H)",
+    "bestClimates": "Moderate, Continental, and Northern zones; requires ice barrier in cold regions.",
+    "bestFor": "Homeowners seeking dependable weatherproofing, wide architectural color choices, and the lowest upfront installation investment.",
+    "pros": [
+      "Lowest upfront material and labor investment of all steep-slope roofing systems",
+      "Widespread contractor familiarity ensures prompt installation and competitive labor rates",
+      "Architectural multi-layer laminated dimensional profiles provide depth and shadow lines",
+      "Available with algae-resistant Scotchgard or copper granules to prevent dark streaks",
+      "Class 4 impact-resistant options qualify for homeowner insurance premium discounts"
+    ],
+    "cons": [
+      "Shorter total service life compared to composite, metal, or natural slate",
+      "Vulnerable to granule erosion under extreme thermal cycling and intense UV exposure",
+      "Requires adequate attic soffit and ridge ventilation to prevent blistering"
+    ],
+    "specifications": {
+      "matType": "Fiberglass reinforcing mat embedded in asphalt coating",
+      "fasteners": "Corrosion-resistant 1-1/4 inch barbed roofing nails (4 to 6 per shingle)",
+      "deckRequirement": "Minimum 7/16-inch OSB or 1/2-inch CDX plywood sheathing",
+      "minimumSlope": "2:12 with double-layer underlayment; 4:12 standard application"
+    },
+    "comparison": {
+      "alt1": {
+        "slug": "composite-shingle-installation",
+        "name": "Composite Shingles",
+        "note": "Composite offers double the lifespan (50 years) and superior impact resistance at roughly 2x the material investment."
+      },
+      "alt2": {
+        "slug": "metal-shingle-installation",
+        "name": "Metal Shingles",
+        "note": "Metal shingles provide 50+ year longevity and superior hail resistance, eliminating granule shedding entirely."
+      }
+    },
+    "faqs": [
+      {
+        "q": "What is the difference between 3-tab and architectural asphalt shingles?",
+        "a": "Architectural (dimensional) shingles feature two bonded fiberglass layers, providing a dimensional wood-shake appearance, 110-130 mph wind ratings, and 30-year warranties. Traditional 3-tab shingles are single-layer flat strips with lower 60-70 mph wind ratings and a shorter 20-year expected service life."
+      },
+      {
+        "q": "How long does a complete asphalt shingle installation take?",
+        "a": "For an average 2,000 to 2,500 square foot single-family home, a professional roofing crew typically completes tear-off, underlayment installation, shingling, flashing, and magnetic cleanup in 1 to 2 business days, weather permitting."
+      },
+      {
+        "q": "Can new asphalt shingles be installed over an existing roof layer?",
+        "a": "While building codes (IRC Section R908.3) permit up to two layers of asphalt shingles in many jurisdictions, a complete tear-off is recommended to inspect the underlying roof deck for rotted sheathing, replace flashing, and ensure full manufacturer warranty coverage."
+      },
+      {
+        "q": "What wind rating do architectural asphalt shingles carry?",
+        "a": "Standard architectural shingles carry ASTM D7158 Class H wind ratings, certifying resistance to winds up to 150 mph when installed with a 6-nail fastening pattern and approved starter strips along eaves and rakes."
+      }
+    ],
+    "image": "/assets/images/services/asphalt-shingles.jpg"
+  },
+  {
+    "id": "wood-cedar",
+    "slug": "wood-cedar-shingle-installation",
+    "name": "Wood & Cedar Shingle Installation",
+    "titleName": "Wood & Cedar Shingle Installation & Roof Replacement",
+    "material": "Wood / Cedar",
+    "shortDescription": "Natural cedar shingles and hand-split shakes deliver authentic rustic charm, natural insulating R-value, and organic architectural elegance.",
+    "costRange": "$750 – $1,250 per square",
+    "costSlug": "wood-cedar-shingle-roof-cost",
+    "lifespan": "30 to 45 Years (with maintenance)",
+    "weightPerSquare": "250 – 350 lbs",
+    "fireRating": "Class A or B (when factory pressure-treated)",
+    "impactRating": "Class 3 (natural resistance)",
+    "windRating": "Up to 120 MPH",
+    "bestClimates": "Temperate, coastal, and Pacific Northwest; requires periodic preservative treatment in high-humidity zones.",
+    "bestFor": "Historic restorations, coastal cottages, Craftsman estates, and homeowners seeking natural, renewable architectural beauty.",
+    "pros": [
+      "Unmatched natural warmth and silver-gray weathered patina over time",
+      "High natural insulating properties (approximately double the R-value of asphalt)",
+      "High natural resistance to wind uplift due to rigidity and overlapping dimensions",
+      "Hand-split shakes offer rich shadow lines and distinctive texture"
+    ],
+    "cons": [
+      "Restricted in designated Wildland-Urban Interface (WUI) wildfire zones without Class A treatment",
+      "Demands periodic washing, moss removal, and oil preservative treatments",
+      "Higher skilled labor requirement for proper batten ventilation installation"
+    ],
+    "specifications": {
+      "matType": "100% Edge-Grain Western Red Cedar, Alaskan Yellow Cedar, or Cypress",
+      "fasteners": "Stainless steel (304 or 316) or hot-dipped galvanized ring-shank nails",
+      "deckRequirement": "Spaced cedar breather battens or solid decking with 3D ventilation matrix",
+      "minimumSlope": "3:12 for shingles with interlayment; 4:12 standard"
+    },
+    "comparison": {
+      "alt1": {
+        "slug": "composite-shingle-installation",
+        "name": "Composite Shingles",
+        "note": "Composite synthetic shake replicates natural cedar appearance with Class A fire rating and zero ongoing preservative maintenance."
+      },
+      "alt2": {
+        "slug": "asphalt-shingle-installation",
+        "name": "Asphalt Shingles",
+        "note": "Asphalt provides an affordable Class A fire-rated alternative without cedar's periodic moss-treatment requirements."
+      }
+    },
+    "faqs": [
+      {
+        "q": "What is the difference between cedar shingles and cedar shakes?",
+        "a": "Cedar shingles are sawn on both sides for a smooth, uniform, tailored appearance with clean lines. Cedar shakes are hand-split on the face and sawn on the back, creating a textured, rustic surface with thick butt edges that cast deep architectural shadows."
+      },
+      {
+        "q": "Are wood cedar shingles legal in wildfire hazard zones?",
+        "a": "Untreated cedar is prohibited in many high-fire-risk jurisdictions. However, pressure-impregnated fire-retardant treated cedar shingles that achieve UL 790 Class A fire ratings are permitted in many regulated communities when installed over approved gypsum sheathing."
+      },
+      {
+        "q": "How often do cedar shingle roofs require maintenance?",
+        "a": "Cedar roofs require inspection every 2 to 3 years. Preventative maintenance includes clearing leaves and pine needles from valleys, treating moss or mildew growth with eco-friendly fungicides, and ensuring gutters allow rapid drainage."
+      }
+    ],
+    "image": "/assets/images/services/wood-cedar-shingles.jpg"
+  },
+  {
+    "id": "metal",
+    "slug": "metal-shingle-installation",
+    "name": "Metal Shingle Installation",
+    "titleName": "Metal Shingle Installation & Roof Replacement",
+    "material": "Metal",
+    "shortDescription": "Engineered stone-coated steel and stamped aluminum shingles combine the traditional aesthetic of slate, tile, or shake with the indestructible strength of metal.",
+    "costRange": "$850 – $1,400 per square",
+    "costSlug": "metal-shingle-roof-cost",
+    "lifespan": "50 to 70 Years",
+    "weightPerSquare": "140 – 170 lbs (Extremely lightweight)",
+    "fireRating": "Class A (Non-combustible)",
+    "impactRating": "Class 4 (Highest UL 2218 rating)",
+    "windRating": "Up to 140–160 MPH",
+    "bestClimates": "Severe storm corridors, hail alleys, hurricane coastlines, and heavy snowfall regions.",
+    "bestFor": "Homeowners who want a permanent, once-in-a-lifetime roofing installation that withstands hail, hurricane winds, and wildfires.",
+    "pros": [
+      "Exceptional 50 to 70-year service life outlasts standard asphalt by 2 to 3 times",
+      "Interlocking shingle profiles resist 140+ mph hurricane-force wind uplift",
+      "Class 4 impact rating resists severe golf-ball and tennis-ball sized hailstones",
+      "Extremely lightweight (under 170 lbs/square), minimizing structural roof load",
+      "Qualifies for maximum homeowner insurance policy discounts in storm states"
+    ],
+    "cons": [
+      "Higher initial material and skilled installation investment than asphalt",
+      "Requires factory-matched trim and specialized bending tools at hips and valleys",
+      "Uncoated bare aluminum requires anti-corrosion considerations near saltwater surf"
+    ],
+    "specifications": {
+      "matType": "26-gauge Galvalume (aluminum-zinc alloy) steel coated with ceramic stone granules",
+      "fasteners": "Concealed hex-head screws or ring-shank fasteners driven through interlocking flange",
+      "deckRequirement": "Solid 1/2-inch decking or direct-to-batten installation systems",
+      "minimumSlope": "3:12 pitch standard"
+    },
+    "comparison": {
+      "alt1": {
+        "slug": "asphalt-shingle-installation",
+        "name": "Asphalt Shingles",
+        "note": "Metal shingles cost 2 to 3x more upfront than asphalt, but eliminate re-roofing cycles for over half a century."
+      },
+      "alt2": {
+        "slug": "slate-shingle-installation",
+        "name": "Slate Shingles",
+        "note": "Metal shingles emulate natural slate texture at one-seventh the structural weight, requiring zero framing reinforcement."
+      }
+    },
+    "faqs": [
+      {
+        "q": "Are metal shingle roofs noisy when it rains?",
+        "a": "No. Because metal shingles are installed over solid wood roof decking and modern synthetic underlayment, attic insulation and drywall absorb acoustic vibrations. Sound levels inside the living space are indistinguishable from asphalt shingle roofs."
+      },
+      {
+        "q": "Can metal shingles withstand large hail without denting?",
+        "a": "Stone-coated steel shingles carry a UL 2218 Class 4 impact rating, the highest possible benchmark. The textured stone granule coating conceals minor surface stresses while the resilient steel substrate resists puncture from 2-inch hailstones."
+      },
+      {
+        "q": "Will a metal shingle roof attract lightning strikes?",
+        "a": "No. Metal does not attract lightning; lightning seeks the tallest grounded path to earth regardless of roof material. If struck, non-combustible metal shingles disperse electrical energy safely without catching fire."
+      }
+    ],
+    "image": "/assets/images/services/metal-shingles.jpg"
+  },
+  {
+    "id": "rubber",
+    "slug": "rubber-shingle-installation",
+    "name": "Rubber Shingle Installation",
+    "titleName": "Rubber Shingle Installation & Roof Replacement",
+    "material": "Rubber",
+    "shortDescription": "Engineered from up to 95% recycled automotive tires and virgin polymers, recycled rubber shingles offer near-indestructible impact resistance, eco-sustainability, and authentic slate-shake styling.",
+    "costRange": "$800 – $1,350 per square",
+    "costSlug": "rubber-shingle-roof-cost",
+    "lifespan": "50+ Years",
+    "weightPerSquare": "240 – 310 lbs",
+    "fireRating": "Class A or C (system dependent)",
+    "impactRating": "Class 4 (Superior hail deflection)",
+    "windRating": "Up to 130–150 MPH",
+    "bestClimates": "Severe hail belts (Texas, Oklahoma, Colorado, Kansas), freeze-thaw mountain regions, and northern snow belts.",
+    "bestFor": "Eco-conscious homeowners wanting maximum hail defense and a permanent roof made from upcycled materials.",
+    "pros": [
+      "Extreme hail resistance: elastomeric rubber deflects severe ice impacts without cracking",
+      "Eco-friendly manufacturing diverts hundreds of tires from landfills per residential roof",
+      "Will not crack, curl, or break during freeze-thaw cycles or foot traffic",
+      "Authentic chiseled-slate and rough-sawn shake molded profiles"
+    ],
+    "cons": [
+      "Select certified installer network required for proper thermal expansion spacing",
+      "Slight initial rubber odor during hot summer installation that dissipates quickly",
+      "Must not be confused with flat-roof EPDM rubber membrane sheets"
+    ],
+    "specifications": {
+      "matType": "Compression-molded crumb rubber (recycled tires) with UV stabilizers and virgin polymers",
+      "fasteners": "Electro-galvanized or stainless steel coil nails",
+      "deckRequirement": "Standard 7/16-inch OSB or 1/2-inch plywood sheathing",
+      "minimumSlope": "3:12 with full water-resistive membrane"
+    },
+    "comparison": {
+      "alt1": {
+        "slug": "slate-shingle-installation",
+        "name": "Slate Shingles",
+        "note": "Rubber shingles replicate natural slate chiseled edges at a fraction of the cost, without the risk of brittle stone cracking."
+      },
+      "alt2": {
+        "slug": "composite-shingle-installation",
+        "name": "Composite Shingles",
+        "note": "Both offer 50-year longevity; rubber provides higher elastic impact cushioning, while composite provides rigid resin profiles."
+      }
+    },
+    "faqs": [
+      {
+        "q": "What is the difference between rubber shingles and EPDM rubber roofing?",
+        "a": "Rubber shingles are steep-slope architectural shingles molded from recycled polymers to emulate natural slate or cedar shakes on pitched residential roofs. EPDM is a flat rubber membrane sheet installed on commercial or flat low-slope surfaces. American Shingle Co. installs steep-slope rubber shingles only."
+      },
+      {
+        "q": "Can you walk on a rubber shingle roof without damaging it?",
+        "a": "Yes. Recycled rubber shingles are elastomeric and virtually unbreakable under normal foot traffic, making routine maintenance, window washing, and gutter cleaning completely safe without risking cracked tiles."
+      },
+      {
+        "q": "How do rubber shingles perform in extreme cold weather?",
+        "a": "Rubber shingles remain flexible at temperatures well below freezing (-40°F), preventing the brittle thermal shock fractures that frequently plague asphalt or natural clay tiles during severe winter freezes."
+      }
+    ],
+    "image": "/assets/images/services/rubber-shingles.jpg"
+  },
+  {
+    "id": "composite",
+    "slug": "composite-shingle-installation",
+    "name": "Composite Shingle Installation",
+    "titleName": "Composite Shingle Installation & Roof Replacement",
+    "material": "Composite",
+    "shortDescription": "Engineered from virgin resins and mineral reinforcements, composite synthetic slate and shake shingles deliver luxury aesthetics, Class 4 impact resistance, and a 50-year lifespan without structural reinforcement.",
+    "costRange": "$950 – $1,600 per square",
+    "costSlug": "composite-shingle-roof-cost",
+    "lifespan": "50+ Years",
+    "weightPerSquare": "200 – 280 lbs",
+    "fireRating": "Class A (UL 790 certified)",
+    "impactRating": "Class 4 (Highest UL 2218 certification)",
+    "windRating": "Up to 110–130 MPH",
+    "bestClimates": "All climate zones, including coastal salt fog, high-UV deserts, and freeze-thaw mountain elevations.",
+    "bestFor": "Luxury homes, HOA communities requiring uniform aesthetics, and homeowners seeking slate or cedar visuals without structural retrofits.",
+    "pros": [
+      "Faithfully replicates authentic hand-split cedar shake and quarried slate textures",
+      "Class A fire rating and Class 4 impact resistance without heavy structural modifications",
+      "UV-stabilized engineered polymers resist fading, cracking, and rot",
+      "Lightweight profile allows installation over standard residential roof framing"
+    ],
+    "cons": [
+      "Higher upfront investment than conventional asphalt roofing",
+      "Requires factory-certified installation practices to maintain 50-year limited warranty",
+      "Specialized cutting blades required for precision hip and valley cuts"
+    ],
+    "specifications": {
+      "matType": "Engineered polymer resin with limestone filler, thermal stabilizers, and UV inhibitors",
+      "fasteners": "Stainless steel or hot-dipped galvanized roofing nails",
+      "deckRequirement": "Standard 15/32-inch APA-rated plywood or 7/16-inch OSB deck",
+      "minimumSlope": "3:12 with approved self-adhering underlayment; 4:12 standard"
+    },
+    "comparison": {
+      "alt1": {
+        "slug": "slate-shingle-installation",
+        "name": "Slate Shingles",
+        "note": "Composite synthetic slate looks virtually identical to natural stone from ground level, but weighs 75% less and avoids expensive rafter reinforcement."
+      },
+      "alt2": {
+        "slug": "wood-cedar-shingle-installation",
+        "name": "Wood Cedar Shingles",
+        "note": "Composite shake delivers cedar aesthetics with a permanent Class A fire rating and zero wood rot or moss susceptibility."
+      }
+    },
+    "faqs": [
+      {
+        "q": "What are composite roof shingles made of?",
+        "a": "Composite shingles are manufactured from advanced thermoplastic polymer blends, virgin resins, recycled plastics, and mineral stabilizers molded from authentic quarried slate and hand-split cedar masters to achieve realistic texture, grain, and color gradients."
+      },
+      {
+        "q": "Do composite shingles fade in intense sunlight?",
+        "a": "High-quality composite shingles incorporate UV-absorbing pigments and thermal stabilizers distributed throughout the entire tile matrix, rather than a surface coat, preventing chalking or premature sun fading for decades."
+      },
+      {
+        "q": "Can composite shingles be installed over standard roof decking?",
+        "a": "Yes. Unlike heavy natural slate which requires heavy structural rafter engineering, composite shingles weigh between 200 and 280 pounds per square, allowing direct installation on standard 7/16-inch OSB or 1/2-inch plywood decking."
+      }
+    ],
+    "image": "/assets/images/services/composite-shingles.jpg"
+  },
+  {
+    "id": "slate",
+    "slug": "slate-shingle-installation",
+    "name": "Slate Shingle Installation",
+    "titleName": "Slate Shingle Installation & Roof Replacement",
+    "material": "Slate",
+    "shortDescription": "Quarried natural stone slate represents the pinnacle of luxury roofing, offering non-combustible fire protection and unmatched structural durability lasting 75 to over 100 years.",
+    "costRange": "$1,500 – $3,000 per square",
+    "costSlug": "slate-shingle-roof-cost",
+    "lifespan": "75 to 100+ Years",
+    "weightPerSquare": "800 – 1,500 lbs (Heavy structural load)",
+    "fireRating": "Class A (Natural non-combustible stone)",
+    "impactRating": "Class 3 to 4 (dependent on stone thickness)",
+    "windRating": "Up to 130+ MPH",
+    "bestClimates": "Northeast, Mid-Atlantic, historic preservation districts, and heritage architecture.",
+    "bestFor": "Architectural heritage estates, historic landmarks, and homeowners investing in a generational 100-year roofing asset.",
+    "pros": [
+      "Centuries-proven longevity: S1 grade natural slate regularly lasts 100+ years",
+      "Completely fireproof natural metamorphic rock with zero flame spread",
+      "Extraordinary prestige and highest home appraisal value enhancement",
+      "Naturally impervious to rot, insects, algae, and fungal growth"
+    ],
+    "cons": [
+      "Extremely heavy (800–1,500 lbs/sq) requiring structural engineering evaluation of rafters",
+      "Highest upfront material cost and requires certified master slater craftsmanship",
+      "Brittle stone requires copper nail fastening and careful handling during roof walks"
+    ],
+    "specifications": {
+      "matType": "ASTM C406 Grade S1 natural quarried slate (Vermont, Pennsylvania, Virginia)",
+      "fasteners": "Solid copper roofing nails or stainless steel ring-shank nails",
+      "deckRequirement": "Solid 3/4-inch nominal tongue-and-groove wood boards or engineered timber decking",
+      "minimumSlope": "4:12 standard; lower pitches require copper soldered pan underlayment"
+    },
+    "comparison": {
+      "alt1": {
+        "slug": "composite-shingle-installation",
+        "name": "Composite Shingles",
+        "note": "Composite synthetic slate provides identical historical visual appeal at one-third the cost and one-quarter the structural weight."
+      },
+      "alt2": {
+        "slug": "metal-shingle-installation",
+        "name": "Metal Shingles",
+        "note": "Metal slate-profile shingles offer superior hail elasticity and much lighter weight than quarried natural stone."
+      }
+    },
+    "faqs": [
+      {
+        "q": "Does my home need structural reinforcement for a natural slate roof?",
+        "a": "Yes, in most cases. Natural slate weighs between 800 and 1,500 pounds per roofing square (100 sq ft), compared to 250 pounds for asphalt. A licensed structural engineer must inspect your roof trusses and rafters to confirm weight-bearing capacity before installation."
+      },
+      {
+        "q": "What grade of slate provides the longest lifespan?",
+        "a": "ASTM C406 classifies roofing slate into three grades: S1 grade provides an expected service life in excess of 75 to 100+ years; S2 grade lasts 40 to 75 years; and S3 grade lasts 20 to 40 years. American Shingle Co. partner slaters install premium S1 grade slate."
+      },
+      {
+        "q": "What nails and flashing are used with slate roofs?",
+        "a": "Because slate lasts over a century, fastening hardware must match its lifespan. Only solid copper or high-grade stainless steel roofing nails and thick 16-oz or 20-oz cold-rolled copper valley, step, and chimney flashing are installed with slate."
+      }
+    ],
+    "image": "/assets/images/services/slate-shingles.jpg"
+  },
+  {
+    "id": "solar",
+    "slug": "solar-shingle-installation",
+    "name": "Solar Shingle Installation",
+    "titleName": "Solar Shingle Installation & Roof Replacement",
+    "material": "Solar",
+    "shortDescription": "Building-Integrated Photovoltaics (BIPV) seamlessly integrate clean solar energy generation directly into sleek, low-profile shingle tiles without bulky rack-mounted solar panels.",
+    "costRange": "$2,100 – $3,800 per square (before tax credits)",
+    "costSlug": "solar-shingle-roof-cost",
+    "lifespan": "25 to 30 Years (power output warranty)",
+    "weightPerSquare": "300 – 420 lbs",
+    "fireRating": "Class A (UL 790 certified)",
+    "impactRating": "Class 3 to 4 (Tempered solar glass)",
+    "windRating": "Up to 130 MPH",
+    "bestClimates": "Sunbelt states, high utility rate regions, and areas with aggressive net metering policies.",
+    "bestFor": "Homeowners who need a roof replacement and want renewable solar power without altering their architectural roofline.",
+    "pros": [
+      "Seamless roof integration: zero bulky aluminum racks or roof membrane penetrations",
+      "Generates clean electricity to offset rising household electric utility rates",
+      "Qualifies for the 30% Federal Residential Clean Energy Tax Credit (Section 25D)",
+      "High architectural curb appeal enhances property value and passes strict HOA reviews"
+    ],
+    "cons": [
+      "Higher upfront investment requiring coordinated roofing and electrical trades",
+      "Energy generation efficiency dependent on roof azimuth (south/west orientation)",
+      "Dual warranties: separate coverage terms for weatherproofing roof vs electrical output"
+    ],
+    "specifications": {
+      "matType": "Monocrystalline photovoltaic silicon cells encapsulated in tempered impact glass",
+      "fasteners": "Concealed wiring harness with engineered interlocking mechanical fasteners",
+      "deckRequirement": "Standard 1/2-inch exterior CDX plywood or OSB deck",
+      "minimumSlope": "3:12 pitch minimum"
+    },
+    "comparison": {
+      "alt1": {
+        "slug": "asphalt-shingle-installation",
+        "name": "Asphalt Shingles",
+        "note": "Solar shingles are frequently paired with architectural asphalt shingles on non-south-facing roof facets to balance budget and energy generation."
+      },
+      "alt2": {
+        "slug": "metal-shingle-installation",
+        "name": "Metal Shingles",
+        "note": "Both offer modern aesthetics; metal focuses purely on lifetime weather defense, while solar shingles actively pay for themselves over time."
+      }
+    },
+    "faqs": [
+      {
+        "q": "How do solar shingles differ from traditional rooftop solar panels?",
+        "a": "Traditional solar panels are mounted on aluminum racks bolted through your existing roof shingles. Solar shingles are the roof itself: they serve as both primary waterproof building shingles and electricity-generating photovoltaic tiles, sitting flush with the roofline."
+      },
+      {
+        "q": "Do solar shingles qualify for the Federal Solar Tax Credit?",
+        "a": "Yes. Qualifying residential solar shingle installations qualify for the 30% Federal Residential Clean Energy Credit (IRC Section 25D) on both solar hardware and associated electrical installation costs. Consult your CPA for tax guidance."
+      },
+      {
+        "q": "Can you combine solar shingles with regular shingles?",
+        "a": "Yes. Most solar shingle installations install active photovoltaic shingles on sunny south- and west-facing roof slopes, while matching architectural or composite shingles are installed on shaded north-facing facets to maximize return on investment."
+      }
+    ],
+    "image": "/assets/images/services/solar-shingles.jpg"
+  }
+]

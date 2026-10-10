@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+title: Roofing Shingle Guides & Homeowner Resources | American Shingle Co.
+description: Technical roofing guides, storm damage checklists, building code basics, and contractor hiring advice. Reviewed by building envelope specialists.
+breadcrumbs:
+  - name: Resources
+    url: /resources/
+---
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+  <div style="max-width: 950px; margin: 0 auto;">
+    
+    <div class="trust-pill" style="margin-bottom: 1rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <span>Technical Knowledge Center | Reviewed by {{ site.reviewer.name }}, {{ site.reviewer.title }}</span>
+    </div>
+
+    <h1>Roofing Shingle Guides & Resources</h1>
+
+    <!-- Direct Answer Box -->
+    <div class="direct-answer">
+      <strong>Expert Homeowner Educational Resources:</strong> Before investing in a shingle roof installation or replacement, understanding material engineering, municipal building codes, attic ventilation dynamics, and warranty fine print protects your investment. Explore our library of expert guides written to help you make informed decisions.
+    </div>
+
+    <!-- 27 Resource Guides Grid -->
+    <h2>Explore All 27 Educational Guides</h2>
+    <div class="services-grid" style="grid-template-columns: 1fr; gap: 1.25rem; margin: 2rem 0;">
+      {% for r in resources %}
+      <div class="service-card" style="padding: 1.5rem;">
+        <h3 style="margin-top: 0; margin-bottom: 0.5rem;"><a href="/resources/{{ r.slug }}/">{{ r.title }}</a></h3>
+        <p style="font-size: 0.95rem; margin-bottom: 1rem;">{{ r.excerpt }}</p>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="/resources/{{ r.slug }}/" class="btn btn-secondary" style="font-size: 0.88rem; padding: 0.5rem 1rem;">
+            Read Guide &rarr;
+          </a>
+          {% if r.serviceSlug %}
+          <a href="/services/{{ r.serviceSlug }}/" style="font-size: 0.88rem; align-self: center; margin-left: 0.5rem;">
+            View Related Service
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Final Call to Action -->
+    <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
+      <h2 style="color: #ffffff; margin-top: 0;">Have Questions About Your Upcoming Roof Project?</h2>
+      <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
+        Speak directly with a roofing specialist to get answers about materials, warranties, and local building codes. Connect with licensed and insured local contractors in {{ site.responseTime }}.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.1rem;">
+          Call (833) 348-0328
+        </a>
+        <a href="/states/" class="btn btn-secondary">
+          Browse Service Areas
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

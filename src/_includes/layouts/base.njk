@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>{{ title }}{% if not ('American Shingle Co.' in title) %} | {{ site.name }}{% endif %}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ site.domain }}{{ page.url }}">
+  <meta name="robots" content="{{ robots if robots else 'index, follow' }}">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ title }} | {{ site.name }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ site.domain }}{{ page.url }}">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }} | {{ site.name }}">
+  <meta name="twitter:description" content="{{ description }}">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- JSON-LD Structured Data Graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ site.domain }}/#organization",
+        "name": "{{ site.name }}",
+        "legalName": "{{ site.legalName }}",
+        "url": "{{ site.domain }}",
+        "telephone": "{{ site.phoneSchema }}",
+        "serviceType": "Roofing Contractor Referral Service",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "{{ site.phoneSchema }}",
+          "contactType": "customer service",
+          "availableLanguage": ["English", "Spanish"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.domain }}/#website",
+        "url": "{{ site.domain }}",
+        "name": "{{ site.name }}",
+        "publisher": {
+          "@id": "{{ site.domain }}/#organization"
+        }
+      }
+      {% if schemaExtra %}
+      , {{ schemaExtra | safe }}
+      {% endif %}
+    ]
+  }
+  </script>
+</head>
+<body>
+  {% include "components/header.njk" %}
+  {% include "components/breadcrumbs.njk" %}
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  {% include "components/footer.njk" %}
+  {% include "components/mobile-bar.njk" %}
+
+  <!-- Progressive Enhancement Script -->
+  <script defer src="/assets/js/app.js"></script>
+</body>
+</html>

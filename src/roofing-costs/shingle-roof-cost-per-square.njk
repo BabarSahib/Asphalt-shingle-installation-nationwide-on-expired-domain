@@ -1,0 +1,129 @@
+---
+layout: layouts/base.njk
+title: Shingle Roof Cost Per Square (100 Sq Ft) Explained | American Shingle Co.
+description: Complete guide to shingle roof cost per square. Master the 100 sq ft unit, pitch multipliers, waste allowances, and material cost breakdowns.
+breadcrumbs:
+  - name: Roofing Costs
+    url: /roofing-costs/
+  - name: Cost Per Square
+    url: /roofing-costs/shingle-roof-cost-per-square/
+---
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+  <div style="max-width: 900px; margin: 0 auto;">
+    
+    <div class="trust-pill" style="margin-bottom: 1rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <span>Technical Estimating Formula | Reviewed by {{ site.reviewer.name }}, {{ site.reviewer.title }}</span>
+    </div>
+
+    <h1>Shingle Roof Cost Per Square Explained</h1>
+
+    <!-- Direct Answer Box -->
+    <div class="direct-answer">
+      <strong>What is a Roofing Square?</strong> In residential roofing, one "square" is equal to exactly 100 square feet of roof deck surface area. Shingle roof installation costs typically range from <strong>$380 to $580 per square</strong> for standard architectural asphalt, <strong>$850 to $1,400 per square</strong> for stone-coated metal, and <strong>$1,500 to $3,000+ per square</strong> for natural quarried slate.
+    </div>
+
+    <h2>How Contractors Calculate Your Total Squares</h2>
+    <p>
+      Your home's ground-floor footprint is not your roof's actual surface area. Because residential roofs are sloped, calculating the total squares requires applying a <strong>pitch multiplier</strong> and a <strong>waste factor</strong>:
+    </p>
+
+    <!-- Pitch Multipliers Table -->
+    <h2>1. Roof Pitch Multipliers</h2>
+    <p>Steeper roofs have greater surface area and require specialized safety staging, harnesses, and roof jacks, increasing both square footage and labor difficulty:</p>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Roof Slope (Pitch)</th>
+            <th>Surface Area Multiplier</th>
+            <th>Labor Complexity Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in costs.perSquareGuide.pitchMultipliers %}
+          <tr>
+            <td><strong>{{ p.pitch }}</strong></td>
+            <td>{{ p.factor }}</td>
+            <td>{{ p.laborImpact }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Waste Allowance Table -->
+    <h2>2. Complexity & Cut Waste Allowances</h2>
+    <p>Roof valleys, hips, rakes, dormers, and starter courses require cutting shingles to fit angles, generating material waste that must be factored into order quantities:</p>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Roof Architecture Complexity</th>
+            <th>Standard Order Waste Factor</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for w in costs.perSquareGuide.wasteFactors %}
+          <tr>
+            <td><strong>{{ w.roofComplexity }}</strong></td>
+            <td><strong>{{ w.allowance }}</strong></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Cost by Material Tier Table -->
+    <h2>3. Installed Cost Per Square Across 8 Material Options</h2>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Shingle Material</th>
+            <th>Installed Cost / Square</th>
+            <th>Typical 2,000 Sq Ft Project (25 Squares)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for m in costs.perSquareGuide.materialTiers %}
+          <tr>
+            <td><strong>{{ m.material }}</strong></td>
+            <td><strong>{{ m.costPerSquare }}</strong></td>
+            <td>{{ m.installed2000sqft }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Tear-Off & Decking Costs -->
+    <h2>Additional Line Items Per Square</h2>
+    <ul style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.75; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+      <li><strong>Old Shingle Tear-Off:</strong> $100 to $175 per square per layer (including labor and dumpster fees).</li>
+      <li><strong>Damaged Plywood Decking:</strong> $65 to $110 per 4x8 ft sheet of CDX plywood or OSB sheathing.</li>
+      <li><strong>Ice & Water Shield Upgrade:</strong> $75 to $125 per square of self-adhering eaves/valley membrane.</li>
+      <li><strong>Ridge Vent System:</strong> $12 to $22 per linear foot installed with matching cap shingles.</li>
+    </ul>
+
+    <!-- Final CTA -->
+    <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
+      <h2 style="color: #ffffff; margin-top: 0;">Calculate Your Roof's Exact Square Count</h2>
+      <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
+        Get an accurate on-site or satellite pitch measurement from a licensed roofing pro. Typical partner response time is {{ site.responseTime }}.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.1rem;">
+          Call (833) 348-0328
+        </a>
+        <a href="/states/" class="btn btn-secondary">
+          Browse Service Areas
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

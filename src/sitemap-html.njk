@@ -1,0 +1,59 @@
+---
+layout: layouts/page.njk
+title: HTML Sitemap & Complete Site Directory | American Shingle Co.
+description: Hierarchical HTML directory linking to all services, cost guides, educational resources, and nationwide state directories on American Shingle Co.
+permalink: "sitemap/"
+h1: HTML Site Directory & Sitemap
+lead: Complete directory of all pages, services, pricing guides, educational articles, and nationwide coverage areas across American Shingle Co.
+breadcrumbs:
+  - name: Sitemap
+    url: /sitemap/
+---
+
+<h2>Core Website Hubs</h2>
+<ul style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+  <li><a href="/">Home (National Roofing Network)</a></li>
+  <li><a href="/services/">Shingle Roofing Services Hub</a></li>
+  <li><a href="/states/">Nationwide Service Areas (50 States + DC)</a></li>
+  <li><a href="/roofing-costs/">Roofing Costs & Pricing Hub</a></li>
+  <li><a href="/resources/">Educational Guides & Resources Hub</a></li>
+  <li><a href="/about/">About American Shingle Co.</a></li>
+  <li><a href="/how-it-works/">How It Works (4-Step Process)</a></li>
+  <li><a href="/contact/">Contact Us & Project Intake</a></li>
+  <li><a href="/advertising-disclosure/">Advertising & Referral Disclosure</a></li>
+  <li><a href="/privacy-policy/">Privacy Policy</a></li>
+  <li><a href="/terms-of-service/">Terms of Service</a></li>
+</ul>
+
+<h2>Seven Core Shingle Material Services</h2>
+<ul style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+  {% for s in services %}
+  <li><a href="/services/{{ s.slug }}/">{{ s.name }} (Installation & Replacement)</a></li>
+  {% endfor %}
+</ul>
+
+<h2>Roofing Cost Guides & Pricing Estimators</h2>
+<ul style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+  <li><a href="/roofing-costs/shingle-roof-cost-per-square/">Shingle Roof Cost Per Square Explained</a></li>
+  <li><a href="/roofing-costs/shingle-roof-cost-by-state/">Shingle Roof Cost by State Comparison</a></li>
+  {% for m in costs.materials %}
+  <li><a href="/roofing-costs/{{ m.slug }}/">{{ m.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h2>Educational Resources & Technical Articles</h2>
+<ul style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
+  {% for r in resources %}
+  <li><a href="/resources/{{ r.slug }}/">{{ r.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<h2>All 51 State & District Coverage Directories</h2>
+<div class="state-grid" style="margin-top: 1.5rem;">
+  {% for st in states %}
+  <a href="/states/{{ st.slug }}/" class="state-link">
+    <span>{{ st.name }}</span>
+    <span class="state-abbr">{{ st.abbr }}</span>
+  </a>
+  {% endfor %}
+</div>

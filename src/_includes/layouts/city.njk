@@ -1,0 +1,256 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- City Hero Section -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <!-- Badges Top (Matching furnace repair pros) -->
+      <div class="hero-badges-top">
+        <span class="hero-pill-active"><span class="badge-dot"></span> Priority Roofing Network Active</span>
+        <span class="hero-pill-fast">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          FAST ROOFING SERVICE IN {{ city.name | upper }}, {{ city.stateAbbr }}
+        </span>
+      </div>
+
+      <h1>Shingle Installation in {{ city.name }}, {{ city.stateAbbr }}</h1>
+
+      <!-- Rich Niche Paragraph (Matching furnace repair pros depth) -->
+      <p class="hero-lead">
+        American Shingle Co. provides homeowners in {{ city.name }} with licensed and insured roofing specialists who arrive fully equipped to inspect deck integrity, manage complete tear-offs, and install precision architectural, metal, and composite shingles on schedule. We provide rapid dispatch with typical contractor response times of 30 to 90 minutes &mdash; code-compliant installation, verified contractor credentials, and guaranteed structural protection.
+      </p>
+
+      <div class="hero-trust-pills">
+        <span class="trust-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> {{ city.county }}</span>
+        <span class="trust-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> Median Home Built: {{ city.medianHomeAge }}</span>
+      </div>
+
+      <!-- Action Buttons (Matching furnace repair pros) -->
+      <div class="hero-cta-group">
+        <a href="tel:{{ site.phoneTel }}" class="hero-btn-call">
+          <div class="hero-btn-call-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+          </div>
+          <div class="hero-btn-call-text">
+            <span class="hero-btn-call-sub">CALL 24/7 INTAKE</span>
+            <span class="hero-btn-call-num">{{ site.phoneDisplay }}</span>
+          </div>
+        </a>
+        <a href="/states/{{ city.stateSlug }}/" class="hero-btn-outline">
+          <span>{{ city.state }} Directory &rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="hero-img-wrapper" style="position: relative;">
+        <img src="/assets/images/hero_roofing.jpg" alt="Professional roofing contractor installing shingles in {{ city.name }}, {{ city.stateAbbr }}" class="hero-main-img" width="900" height="650">
+        <div class="hero-img-badge">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <span>Response Time: 30 to 90 Mins</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Ribbon below Hero (Matching furnace repair pros) -->
+<div class="hero-stats-strip">
+  <div class="container hero-stats-grid">
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">30 to 90 Min</span>
+      <span class="hero-stat-label">Average Partner Response</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">Licensed &amp; Insured</span>
+      <span class="hero-stat-label">Independent Contractors</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">All 7 Materials</span>
+      <span class="hero-stat-label">Asphalt, Metal, Slate &amp; More</span>
+    </div>
+    <div class="hero-stat-item">
+      <span class="hero-stat-value">Code Compliance</span>
+      <span class="hero-stat-label">{{ city.permitDept }}</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main City Body -->
+<section style="padding: 3.5rem 0;">
+  <div class="container" style="max-width: 900px;">
+    
+    <!-- Direct Answer Lead -->
+    <div class="direct-answer">
+      <strong>{{ city.name }} Roofing Overview:</strong> Homeowners in {{ city.name }} (population {{ city.population | formatNumber }}) face distinct weather demands with {{ city.hailRisk | lower }} hail exposure and {{ city.windRisk | lower }}. With a local median home construction year of {{ city.medianHomeAge }}, many roofs in {{ city.county }} have reached or exceeded their 20 to 25-year asphalt replacement cycle.
+    </div>
+
+    <!-- Local Roofing Guide -->
+    <h2>Local Roofing Guide for {{ city.name }}, {{ city.state }}</h2>
+    <p>
+      Residential roofs in {{ city.name }} must be engineered to withstand regional climate patterns and comply with municipal building codes enforced by the <strong>{{ city.permitDept }}</strong>. Whether you are replacing weathered shingles or installing a new high-durability roofing system, our network connects you with licensed and insured local contractors who handle the complete scope of work:
+    </p>
+
+    <!-- 7 Services Cards in City -->
+    <h2>Shingle Roofing Services Available in {{ city.name }}</h2>
+    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2.5rem 0;">
+      {% for s in services %}
+      <div class="service-card">
+        <div class="service-card-img-wrapper">
+          <img src="{{ s.image }}" alt="{{ s.name }} in {{ city.name }}" loading="lazy" width="400" height="250" class="service-card-img">
+        </div>
+        <div class="service-card-body">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 style="margin: 0;">
+              {% if city.tier == 1 %}
+              <a href="/{{ city.stateSlug }}/{{ city.slug }}/{{ s.slug }}/">{{ s.name }} in {{ city.name }}</a>
+              {% else %}
+              <a href="/services/{{ s.slug }}/">{{ s.name }}</a>
+              {% endif %}
+            </h3>
+            <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-accent);">{{ s.costRange }}</span>
+          </div>
+          <p style="font-size: 0.92rem; margin: 0.5rem 0;">{{ s.shortDescription }}</p>
+          <div style="display: flex; gap: 1rem; font-size: 0.82rem; color: var(--color-text-muted); margin-top: auto;">
+            <span><strong>Lifespan:</strong> {{ s.lifespan }}</span>
+            <span><strong>Wind:</strong> {{ s.windRating }}</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Building Codes & Permits Box -->
+    <h2>Building Permits & Inspections in {{ city.name }}</h2>
+    <div class="callout-box" style="border-left: 4px solid var(--color-secondary);">
+      <h3 style="margin-top: 0;">Permit Jurisdiction: {{ city.permitDept }}</h3>
+      <p>
+        In {{ city.name }} and throughout {{ city.county }}, residential roof replacements involving a complete tear-off typically require a municipal building permit prior to beginning work. Independent contractors in our network pull required permits on your behalf, schedule necessary in-progress and final roof deck inspections, and ensure installation compliance with adopted building codes.
+      </p>
+    </div>
+
+    <!-- Local Estimated Costs Table -->
+    <h2>Estimated Shingle Roof Costs in {{ city.name }}</h2>
+    <p>
+      Cost ranges based on typical 2,000 square foot residential homes in {{ city.county }}, adjusted for regional labor and material indices:
+    </p>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Shingle Material</th>
+            <th>Cost Per Square Installed</th>
+            <th>Estimated 2,000 Sq Ft Project</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Standard 3-Tab Asphalt</strong></td>
+            <td>$350 – $450</td>
+            <td>$7,000 – $9,000</td>
+          </tr>
+          <tr>
+            <td><strong>Architectural Asphalt Shingles</strong></td>
+            <td>$430 – $590</td>
+            <td>$8,600 – $11,800</td>
+          </tr>
+          <tr>
+            <td><strong>UL 2218 Class 4 Impact Asphalt</strong></td>
+            <td>$490 – $670</td>
+            <td>$9,800 – $13,400</td>
+          </tr>
+          <tr>
+            <td><strong>Stone-Coated Metal Shingles</strong></td>
+            <td>$860 – $1,420</td>
+            <td>$17,200 – $28,400</td>
+          </tr>
+          <tr>
+            <td><strong>Recycled Rubber Shingles</strong></td>
+            <td>$810 – $1,370</td>
+            <td>$16,200 – $27,400</td>
+          </tr>
+          <tr>
+            <td><strong>Composite Synthetic Slate/Shake</strong></td>
+            <td>$960 – $1,620</td>
+            <td>$19,200 – $32,400</td>
+          </tr>
+          <tr>
+            <td><strong>Natural S1 Quarried Slate</strong></td>
+            <td>$1,520 – $3,050+</td>
+            <td>$30,400 – $61,000+</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ZIP Codes Served -->
+    <h2>ZIP Codes Served in {{ city.name }}</h2>
+    <p>
+      Our referral network covers all neighborhoods and properties within {{ city.name }}, including the following primary postal ZIP codes:
+    </p>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 2rem 0;">
+      {% for z in city.zips %}
+      <span style="background: #ffffff; border: 1px solid var(--color-border); padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); font-size: 0.88rem; font-weight: 700; color: var(--color-primary);">
+        {{ z }}
+      </span>
+      {% endfor %}
+    </div>
+
+    <!-- Also Serving Nearby Communities -->
+    {% if city.nearbyCities and city.nearbyCities.length > 0 %}
+    <h2>Also Serving Nearby Communities</h2>
+    <p>We also connect homeowners with licensed roofing professionals in communities neighboring {{ city.name }}:</p>
+    <div class="state-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 2.5rem;">
+      {% for n in city.nearbyCities %}
+      <a href="/{{ n.stateSlug }}/{{ n.slug }}/" class="state-link">
+        <span>{{ n.name }}, {{ city.stateAbbr }}</span>
+        <span class="state-abbr">&rarr;</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Local FAQs -->
+    <h2>Frequently Asked Questions in {{ city.name }}</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-summary">How much does a new shingle roof cost in {{ city.name }}?</summary>
+        <div class="faq-content">
+          <p>For an average 2,000 square foot single-family home in {{ city.name }}, architectural asphalt shingle installation generally costs between $8,600 and $11,800. Final project cost depends on roof slope pitch, number of old shingle layers to tear off, and condition of the underlying roof decking.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">How long does roof replacement take in {{ city.name }}?</summary>
+        <div class="faq-content">
+          <p>Most residential roof replacements in {{ city.name }} are completed in 1 to 2 days by an experienced 5-6 person crew, weather permitting. Complete cleanup with rolling magnetic sweeps is performed daily.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-summary">Are contractors in {{ city.name }} licensed and insured?</summary>
+        <div class="faq-content">
+          <p>Yes. All independent roofing contractors in the American Shingle Co. referral network must verify compliance with {{ city.state }} state and {{ city.county }} licensing, bonding, insurance, and municipal permit requirements.</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- Final Call to Action -->
+    <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
+      <h2 style="color: #ffffff; margin-top: 0;">Request Your {{ city.name }} Roofing Estimate</h2>
+      <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
+        Speak directly with a roofing specialist serving {{ city.name }}. Average partner contractor response time is {{ site.responseTime }}.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.15rem; padding: 0.95rem 2rem;">
+          Call (833) 348-0328
+        </a>
+        <a href="/states/{{ city.stateSlug }}/" class="btn btn-secondary">
+          Browse {{ city.state }} Directory
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>

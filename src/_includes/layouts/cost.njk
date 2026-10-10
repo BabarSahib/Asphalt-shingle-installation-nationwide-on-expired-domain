@@ -1,0 +1,100 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+  <div style="max-width: 880px; margin: 0 auto;">
+    
+    <div class="trust-pill" style="margin-bottom: 1rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      <span>Updated for 2026 | Reviewed by {{ site.reviewer.name }}, {{ site.reviewer.title }}</span>
+    </div>
+
+    <h1 style="margin-bottom: 1rem;">{{ h1 if h1 else title }}</h1>
+
+    <!-- Direct Answer Box -->
+    <div class="direct-answer">
+      <strong>Direct Pricing Summary (2026):</strong> {{ lead if lead else (costItem.title + ' typically ranges between ' + costItem.costPerSquare + ' for complete installation, averaging ' + costItem.averageTotal + ' for a standard 2,000 sq ft home.') }}
+    </div>
+
+    {{ content | safe }}
+
+    <!-- Cost Breakdown Details -->
+    {% if costItem and costItem.goodBetterBest %}
+    <h2>Good, Better, Best Pricing Tiers</h2>
+    <p>Material grades and warranty tiers determine total investment for this roofing system:</p>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Tier Level</th>
+            <th>Grade Name</th>
+            <th>Installed Cost Per Square</th>
+            <th>Application & Durability Profile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Good</strong></td>
+            <td>{{ costItem.goodBetterBest.good.name }}</td>
+            <td><strong>{{ costItem.goodBetterBest.good.cost }}</strong></td>
+            <td>{{ costItem.goodBetterBest.good.desc }}</td>
+          </tr>
+          <tr>
+            <td><strong>Better</strong></td>
+            <td>{{ costItem.goodBetterBest.better.name }}</td>
+            <td><strong>{{ costItem.goodBetterBest.better.cost }}</strong></td>
+            <td>{{ costItem.goodBetterBest.better.desc }}</td>
+          </tr>
+          <tr>
+            <td><strong>Best</strong></td>
+            <td>{{ costItem.goodBetterBest.best.name }}</td>
+            <td><strong>{{ costItem.goodBetterBest.best.cost }}</strong></td>
+            <td>{{ costItem.goodBetterBest.best.desc }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
+
+    {% if costItem and costItem.costDrivers %}
+    <h2>Key Factors That Drive Your Roofing Bid</h2>
+    <ul style="padding-left: 1.25rem; font-size: 1.05rem; line-height: 1.7; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem;">
+      {% for driver in costItem.costDrivers %}
+      <li>{{ driver }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    <!-- Link to Matching Service Page -->
+    {% if costItem and costItem.serviceSlug %}
+    <div class="callout-box callout-box-accent">
+      <h3>Ready to Explore Installation?</h3>
+      <p>
+        Review full technical specifications, ASTM ratings, wind classifications, and installation timelines in our dedicated guide:
+      </p>
+      <a href="/services/{{ costItem.serviceSlug }}/" class="btn btn-primary" style="margin-top: 0.5rem;">
+        View {{ costItem.material }} Shingle Installation Guide
+      </a>
+    </div>
+    {% endif %}
+
+    <!-- Contractor Estimate Action Box -->
+    <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
+      <h2 style="color: #ffffff; margin-top: 0;">Get an Itemized Written Estimate</h2>
+      <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
+        Connect with licensed and insured local roofing professionals for a clear, line-item project proposal. Average contractor response time is {{ site.responseTime }}.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.1rem;">
+          Call (833) 348-0328
+        </a>
+        <a href="/states/" class="btn btn-secondary">
+          Browse Service Areas
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,89 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 4rem;">
+  <div style="max-width: 850px; margin: 0 auto;">
+    
+    <div class="trust-pill" style="margin-bottom: 1rem;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <span>Technical Guide | Reviewed by {{ site.reviewer.name }}, {{ site.reviewer.title }}</span>
+    </div>
+
+    <h1 style="margin-bottom: 1rem;">{{ h1 if h1 else title }}</h1>
+
+    <!-- Direct Answer Lead -->
+    <div class="direct-answer">
+      {{ lead if lead else resourceItem.excerpt }}
+    </div>
+
+    <!-- Key Takeaways Box -->
+    {% if resourceItem and resourceItem.keyTakeaways %}
+    <div style="background: var(--color-surface-alt); border: 1.5px solid var(--color-border); border-radius: var(--radius-md); padding: 1.5rem; margin: 2rem 0;">
+      <h3 style="margin-top: 0; color: var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+        Key Takeaways
+      </h3>
+      <ul style="padding-left: 1.25rem; font-size: 0.98rem; line-height: 1.65; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 0.5rem;">
+        {% for takeaway in resourceItem.keyTakeaways %}
+        <li>{{ takeaway }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <!-- Article Content -->
+    <div class="page-content" style="font-size: 1.05rem; line-height: 1.7; color: var(--color-text-muted);">
+      {{ content | safe }}
+    </div>
+
+    <!-- Reviewer E-E-A-T Box -->
+    <div style="display: flex; gap: 1.25rem; align-items: center; background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.5rem; margin: 3rem 0;">
+      <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--color-primary); color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.3rem; flex-shrink: 0;">
+        MV
+      </div>
+      <div>
+        <div style="font-weight: 800; color: var(--color-primary); font-size: 1.05rem;">Reviewed by {{ site.reviewer.name }}</div>
+        <div style="font-size: 0.85rem; color: var(--color-accent); font-weight: 700; margin-bottom: 0.25rem;">{{ site.reviewer.title }}</div>
+        <div style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.4;">{{ site.reviewer.bio }}</div>
+      </div>
+    </div>
+
+    <!-- Contextual Money Links -->
+    {% if resourceItem and resourceItem.serviceSlug %}
+    <div class="callout-box callout-box-accent">
+      <h3 style="margin-top: 0;">Need Professional Roofing Guidance?</h3>
+      <p>
+        Explore professional installation options and material performance standards in our core service guide:
+      </p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.75rem;">
+        <a href="/services/{{ resourceItem.serviceSlug }}/" class="btn btn-primary">
+          View Service Specifications
+        </a>
+        {% if resourceItem.costSlug %}
+        <a href="/roofing-costs/{{ resourceItem.costSlug }}/" class="btn btn-secondary">
+          View Detailed Cost Guide
+        </a>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- When to Consult a Contractor CTA -->
+    <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
+      <h2 style="color: #ffffff; margin-top: 0;">Have Questions About Your Roof?</h2>
+      <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
+        Speak directly with a licensed and insured local roofing specialist. Phone lines open daily, with average partner response time in {{ site.responseTime }}.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.1rem;">
+          Call (833) 348-0328
+        </a>
+        <a href="/states/" class="btn btn-secondary">
+          Browse Service Areas
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
