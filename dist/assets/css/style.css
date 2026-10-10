@@ -1640,3 +1640,98 @@ details[open] .faq-summary {
   height: 100%;
 }
 
+/* ==========================================================================
+   Our Commitment to Every Homeowner (Matching furnacerepairpros.com)
+   ========================================================================== */
+.commitment-section {
+  background: var(--color-surface-alt, #f8fafc);
+  padding: 4.5rem 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.commitment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.75rem;
+}
+
+.commitment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg, 12px);
+  padding: 1.75rem 1.5rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.commitment-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.commitment-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 30px rgba(12, 35, 64, 0.1);
+  transform: translateY(-4px);
+}
+
+.commitment-card:hover::after {
+  transform: scaleX(1);
+}
+
+.commitment-icon-box {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--color-primary, #0c2340);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(12, 35, 64, 0.2);
+}
+
+.commitment-card h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-primary, #0b1320);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.commitment-card p {
+  color: var(--color-text-muted, #475569);
+  font-size: 0.91rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .commitment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .commitment-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
