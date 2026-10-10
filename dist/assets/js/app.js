@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Mobile Hamburger Menu Toggle
+  // Mobile Hamburger Menu Toggle (Matching furnacerepairpros.com)
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileNavDropdown = document.getElementById('mobile-nav-dropdown');
 
@@ -25,16 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuBtn.addEventListener('click', () => {
       const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
       mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenuBtn.classList.toggle('open');
       mobileMenuBtn.classList.toggle('is-active');
-      mobileNavDropdown.classList.toggle('is-open');
+      const isOpen = mobileNavDropdown.classList.toggle('open');
+      mobileNavDropdown.classList.toggle('is-open', isOpen);
+      mobileNavDropdown.style.display = isOpen ? 'flex' : 'none';
     });
 
     // Close when clicking any nav link inside drawer
     mobileNavDropdown.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenuBtn.setAttribute('aria-expanded', 'false');
-        mobileMenuBtn.classList.remove('is-active');
-        mobileNavDropdown.classList.remove('is-open');
+        mobileMenuBtn.classList.remove('open', 'is-active');
+        mobileNavDropdown.classList.remove('open', 'is-open');
+        mobileNavDropdown.style.display = 'none';
       });
     });
   }
