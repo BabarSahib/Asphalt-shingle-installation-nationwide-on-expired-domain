@@ -31,18 +31,19 @@ layout: layouts/base.njk
       </div>
 
       <!-- Action Buttons (Matching furnace repair pros) -->
-      <div class="hero-cta-group">
-        <a href="tel:{{ site.phoneTel }}" class="hero-btn-call">
-          <div class="hero-btn-call-icon">
+      <div class="hero-actions">
+        <a href="tel:{{ site.phoneTel }}" class="hero-call-btn" id="hero-call-btn">
+          <div class="hero-call-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
           </div>
-          <div class="hero-btn-call-text">
-            <span class="hero-btn-call-sub">CALL 24/7 INTAKE</span>
-            <span class="hero-btn-call-num">{{ site.phoneDisplay }}</span>
+          <div class="hero-call-text">
+            <span class="hero-call-label">Call 24/7 Service</span>
+            <span class="hero-call-number">{{ site.phoneDisplay }}</span>
           </div>
         </a>
-        <a href="/{{ city.stateSlug }}/{{ city.slug }}/" class="hero-btn-outline">
-          <span>All {{ city.name }} Roofing &rarr;</span>
+        <a href="/{{ city.stateSlug }}/{{ city.slug }}/" class="hero-secondary-btn" id="hero-city-btn">
+          <span>All {{ city.name }} Roofing</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>
     </div>
@@ -174,16 +175,17 @@ layout: layouts/base.njk
 
     <!-- Final Call to Action -->
     <div style="background: var(--color-primary); color: #ffffff; padding: 2.5rem; border-radius: var(--radius-lg); text-align: center; margin-top: 3rem;">
-      <h2 style="color: #ffffff; margin-top: 0;">Request an Estimate for {{ service.material }} Shingles in {{ city.name }}</h2>
+      <h2 style="color: #ffffff; margin-top: 0;">Speak With a {{ service.material }} Specialist in {{ city.name }}</h2>
       <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto 1.5rem auto;">
         Connect with licensed and insured local contractors specializing in {{ service.material | lower }} shingle installation. Typical response time is {{ site.responseTime }}.
       </p>
       <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.15rem; padding: 0.95rem 2rem;">
-          Call (833) 348-0328
+        <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" id="service-city-cta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          Call Now: {{ site.phoneDisplay }}
         </a>
         <a href="/{{ city.stateSlug }}/{{ city.slug }}/" class="btn btn-secondary">
-          Browse {{ city.name }} Services
+          Browse {{ city.name }} Services &rarr;
         </a>
       </div>
     </div>

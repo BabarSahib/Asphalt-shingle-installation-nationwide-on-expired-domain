@@ -31,18 +31,19 @@ description: Professional shingle roof installation and replacement across all 5
       </div>
 
       <!-- Action Buttons (Matching furnace repair pros) -->
-      <div class="hero-cta-group">
-        <a href="tel:{{ site.phoneTel }}" class="hero-btn-call">
-          <div class="hero-btn-call-icon">
+      <div class="hero-actions">
+        <a href="tel:{{ site.phoneTel }}" class="hero-call-btn" id="hero-call-btn">
+          <div class="hero-call-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
           </div>
-          <div class="hero-btn-call-text">
-            <span class="hero-btn-call-sub">CALL 24/7 INTAKE</span>
-            <span class="hero-btn-call-num">{{ site.phoneDisplay }}</span>
+          <div class="hero-call-text">
+            <span class="hero-call-label">Call 24/7 Service</span>
+            <span class="hero-call-number">{{ site.phoneDisplay }}</span>
           </div>
         </a>
-        <a href="/states/" class="hero-btn-outline">
-          <span>Browse Service Areas &rarr;</span>
+        <a href="/services/" class="hero-secondary-btn" id="hero-services-btn">
+          <span>View Services</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>
     </div>
@@ -326,11 +327,12 @@ description: Professional shingle roof installation and replacement across all 5
       Speak with a dedicated roofing specialist serving your community. Connect with licensed and insured professionals with average response times of 30 to 90 minutes.
     </p>
     <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
-      <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" style="font-size: 1.15rem; padding: 1rem 2.5rem;">
-        Call (833) 348-0328
+      <a href="tel:{{ site.phoneTel }}" class="btn btn-primary" id="index-bottom-call-btn" style="font-size: 1.15rem; padding: 1rem 2.5rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call Now: {{ site.phoneDisplay }}
       </a>
       <a href="/states/" class="btn btn-secondary" style="font-size: 1.15rem; padding: 1rem 2.5rem;">
-        Browse Service Areas
+        Browse Service Areas &rarr;
       </a>
     </div>
   </div>

@@ -170,32 +170,38 @@ export function renderCityHtml(stateSlug, citySlug) {
         <a href="/contact/" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Desktop Call Action -->
-      <div class="header-desktop-actions">
-        <a href="tel:${site.phoneTel}" class="header-phone-link">
-          <span class="header-phone-label">Call Any Time</span>
-          <span class="header-phone-num">${site.phoneDisplay}</span>
+      <!-- Header Call Action & Hamburger Menu (Matching furnacerepairpros.com) -->
+      <div class="header-cta">
+        <a href="tel:${site.phoneTel}" class="btn btn-primary hide-mobile" title="Call ${site.phoneDisplay}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <span>${site.phoneDisplay}</span>
         </a>
-        <a href="tel:${site.phoneTel}" class="btn btn-primary" title="Call ${site.phoneDisplay}">Call ${site.phoneDisplay}</a>
+        <button class="mobile-menu-toggle hamburger" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
-
-      <!-- Mobile Hamburger Menu Button (Matching furnacerepairpros.com) -->
-      <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-      </button>
     </div>
 
     <!-- Mobile Nav Dropdown Drawer -->
     <div class="mobile-nav-menu" id="mobile-nav-dropdown">
       <nav class="mobile-nav-list">
+        <a href="/" class="mobile-nav-item">Home</a>
         <a href="/services/" class="mobile-nav-item">Shingle Services</a>
         <a href="/states/" class="mobile-nav-item">States Directory</a>
         <a href="/roofing-costs/" class="mobile-nav-item">Roofing Costs</a>
         <a href="/resources/" class="mobile-nav-item">Resources &amp; Guides</a>
         <a href="/about/" class="mobile-nav-item">About Us</a>
         <a href="/contact/" class="mobile-nav-item">Contact</a>
+        <a href="tel:${site.phoneTel}" class="mobile-nav-item" style="color: var(--color-accent); font-weight: 800; display: flex; align-items: center; gap: 0.5rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <span>Call: ${site.phoneDisplay}</span>
+        </a>
       </nav>
     </div>
   </header>
@@ -240,18 +246,19 @@ export function renderCityHtml(stateSlug, citySlug) {
           </div>
 
           <!-- Action Buttons (Matching furnace repair pros) -->
-          <div class="hero-cta-group">
-            <a href="tel:${site.phoneTel}" class="hero-btn-call">
-              <div class="hero-btn-call-icon">
+          <div class="hero-actions">
+            <a href="tel:${site.phoneTel}" class="hero-call-btn" id="hero-call-btn">
+              <div class="hero-call-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
               </div>
-              <div class="hero-btn-call-text">
-                <span class="hero-btn-call-sub">CALL 24/7 INTAKE</span>
-                <span class="hero-btn-call-num">${site.phoneDisplay}</span>
+              <div class="hero-call-text">
+                <span class="hero-call-label">Call 24/7 Service</span>
+                <span class="hero-call-number">${site.phoneDisplay}</span>
               </div>
             </a>
-            <a href="/states/${stateSlug}/" class="hero-btn-outline">
-              <span>${state.name} Directory &rarr;</span>
+            <a href="/states/${stateSlug}/" class="hero-secondary-btn" id="hero-directory-btn">
+              <span>${state.name} Directory</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
         </div>
@@ -440,11 +447,12 @@ export function renderCityHtml(stateSlug, citySlug) {
             Speak directly with a licensed roofing specialist serving ${cityName}. Average partner contractor response time is ${site.responseTime}.
           </p>
           <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <a href="tel:${site.phoneTel}" class="btn btn-primary" style="font-size: 1.15rem; padding: 0.95rem 2rem;">
-              Call ${site.phoneDisplay}
+            <a href="tel:${site.phoneTel}" class="btn btn-primary" id="contact-cta-${citySlug}">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              Call Now: ${site.phoneDisplay}
             </a>
             <a href="/states/${stateSlug}/" class="btn btn-secondary">
-              Browse ${state.name} Directory
+              Browse ${state.name} Directory &rarr;
             </a>
           </div>
         </div>
@@ -453,11 +461,12 @@ export function renderCityHtml(stateSlug, citySlug) {
     </section>
   </main>
 
-  <!-- Mobile Sticky Phone Bar -->
-  <div class="mobile-sticky-bar" id="mobile-sticky-cta">
-    <a href="tel:${site.phoneTel}" class="mobile-sticky-btn" id="mobile-phone-cta">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-      <span>Call ${site.phoneDisplay} (${site.responseTime})</span>
+  <!-- Mobile Sticky Floating Call CTA (Exact match to furnacerepairpros.com) -->
+  <div class="mobile-sticky-cta" role="complementary" aria-label="Call ${site.name}">
+    <a href="tel:${site.phoneTel}" aria-label="Call ${site.phoneDisplay} 24/7">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
     </a>
   </div>
 

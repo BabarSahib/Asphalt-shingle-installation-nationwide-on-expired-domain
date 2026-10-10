@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
+    });
+  });
+
   // Mobile Hamburger Menu Toggle
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileNavDropdown = document.getElementById('mobile-nav-dropdown');
