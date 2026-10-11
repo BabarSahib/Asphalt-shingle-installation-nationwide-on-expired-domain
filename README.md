@@ -8,7 +8,7 @@ A high-performance, conversion-focused, programmatic SEO static website for **Am
 - **Brand**: American Shingle Co.
 - **Apex Domain**: `https://1-stop-roofing.com`
 - **Toll-Free Phone**: `(833) 348-0328` (`tel:+18333480328`) hardcoded in static HTML with zero JavaScript dependency.
-- **H1 Protocol**: Exclusively focuses on *installation* (e.g. `Shingle Installation in [City], [State]`, `Asphalt Shingle Installation`).
+- **H1 Protocol**: Exclusively focuses on *installation* (e.g. `Shingle Roof Installation in [City], [State]`, `Shingle Roof Installation in [State]`, `Shingle Roof Installation`).
 - **Title Protocol**: Combines *installation & replacement* (e.g. `Shingle Roof Installation & Replacement in [City], [State] | American Shingle Co.`).
 - **Estimate Protocol**: Strictly forbids "free estimate" or "paid estimate" across all pages. Uses `Request an Estimate`, `Written Estimate`, etc.
 - **Trust Badges**: Licensed and insured contractor network.

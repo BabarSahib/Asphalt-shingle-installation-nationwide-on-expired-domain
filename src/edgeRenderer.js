@@ -49,7 +49,7 @@ function renderCityHtml(stateSlug, citySlug) {
   const metalHigh = Math.round(27000 * costIndex);
 
   const title = `Shingle Roof Installation & Replacement in ${cityName}, ${state.abbr} | ${site.name}`;
-  const h1 = `Shingle Installation in ${cityName}, ${state.abbr}`;
+  const h1 = `Shingle Roof Installation in ${cityName}, ${state.abbr}`;
   const metaDesc = `Connect with licensed and insured shingle roof installation contractors in ${cityName}, ${state.abbr}. Average partner response time is 30 to 90 minutes.`;
   const canonicalUrl = `${site.domain}/${stateSlug}/${citySlug}/`;
 
